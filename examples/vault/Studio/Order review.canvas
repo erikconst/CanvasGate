@@ -1,0 +1,275 @@
+{
+  "nodes": [
+    {
+      "id": "spec",
+      "type": "file",
+      "file": "Studio/Specification.md",
+      "x": 30,
+      "y": 160,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "approved",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=approved",
+      "x": 290,
+      "y": 160,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "policy",
+      "type": "text",
+      "text": "SLICE: SECTION:Policy",
+      "x": 550,
+      "y": 45,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "plan",
+      "type": "text",
+      "text": "AGENT:\n{\"prompt\": \"Write an English implementation plan from the supplied policy. Return JSON text with tasks, tests and risks arrays. Include at least 2 tasks, 3 tests, and 1 risk. Do not generate code.\", \"schema\": \"json\", \"max_retries\": 1}",
+      "x": 810,
+      "y": 45,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "review",
+      "type": "text",
+      "text": "AGENT:\n{\"prompt\": \"The policy is not approved. Return JSON text with tasks, tests and risks arrays describing review work. Include at least 2 tasks, 3 checks, 1 risk. Do not implement code.\", \"schema\": \"json\", \"max_retries\": 1}",
+      "x": 550,
+      "y": 335,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "join",
+      "type": "text",
+      "text": "JOIN: ANY",
+      "x": 1070,
+      "y": 160,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "write",
+      "type": "text",
+      "text": "WRITE: OVERWRITE:Studio/Output/Plan.md",
+      "x": 1070,
+      "y": 390,
+      "width": 220,
+      "height": 130
+    },
+    {
+      "id": "out",
+      "type": "text",
+      "text": "OUTPUT: Accepted implementation plan",
+      "x": 810,
+      "y": 390,
+      "width": 220,
+      "height": 130
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "spec",
+      "toNode": "approved",
+      "label": ""
+    },
+    {
+      "id": "e1",
+      "fromNode": "approved",
+      "toNode": "policy",
+      "label": "true"
+    },
+    {
+      "id": "e2",
+      "fromNode": "policy",
+      "toNode": "plan",
+      "label": ""
+    },
+    {
+      "id": "e3",
+      "fromNode": "approved",
+      "toNode": "review",
+      "label": "false"
+    },
+    {
+      "id": "e4",
+      "fromNode": "plan",
+      "toNode": "join",
+      "label": ""
+    },
+    {
+      "id": "e5",
+      "fromNode": "review",
+      "toNode": "join",
+      "label": ""
+    },
+    {
+      "id": "e6",
+      "fromNode": "join",
+      "toNode": "write",
+      "label": ""
+    },
+    {
+      "id": "e7",
+      "fromNode": "write",
+      "toNode": "out",
+      "label": ""
+    }
+  ],
+  "canvasgate": {
+    "version": 3,
+    "require_contracts": [
+      "AGENT",
+      "WRITE"
+    ],
+    "permissions": {
+      "read_dirs": [
+        "Studio"
+      ],
+      "write_dirs": [
+        "Studio/Output"
+      ],
+      "allow_cli": true
+    },
+    "contracts": {
+      "plan": {
+        "description": "Pinned policy and essential rules must reach the model.",
+        "input": {
+          "required_sources": [
+            {
+              "path": "Studio/Specification.md",
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "version": {
+                "key": "revision",
+                "equals": 3
+              },
+              "role": "policy"
+            }
+          ],
+          "allowed_sources": [
+            "Studio/Specification.md"
+          ],
+          "required_text": [
+            "POLICY_ID: order-v3",
+            "Reject booleans as integers",
+            "Reject duplicate SKUs",
+            "Use integer cents"
+          ]
+        },
+        "output": {
+          "required_fields": [
+            "tasks",
+            "tests",
+            "risks"
+          ],
+          "schema": {
+            "type": "object",
+            "required": [
+              "tasks",
+              "tests",
+              "risks"
+            ],
+            "properties": {
+              "tasks": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "tests": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "risks": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "review": {
+        "input": {
+          "required_sources": [
+            {
+              "path": "Studio/Specification.md",
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "version": {
+                "key": "revision",
+                "equals": 3
+              },
+              "role": "policy"
+            }
+          ],
+          "allowed_sources": [
+            "Studio/Specification.md"
+          ]
+        },
+        "output": {
+          "required_fields": [
+            "tasks",
+            "tests",
+            "risks"
+          ],
+          "schema": {
+            "type": "object",
+            "required": [
+              "tasks",
+              "tests",
+              "risks"
+            ],
+            "properties": {
+              "tasks": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "tests": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "risks": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "write": {
+        "input": {
+          "required_fields": [
+            "tasks",
+            "tests",
+            "risks"
+          ],
+          "allowed_sources": [
+            "Studio/Specification.md"
+          ]
+        }
+      }
+    }
+  }
+}

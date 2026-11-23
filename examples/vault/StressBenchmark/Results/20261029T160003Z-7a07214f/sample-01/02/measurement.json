@@ -1,0 +1,105 @@
+{
+  "variant": 2,
+  "transport": "cli",
+  "model": "gpt-6.1-sol",
+  "usage": {
+    "input_tokens": 13767,
+    "cached_input_tokens": 0,
+    "output_tokens": 380,
+    "total_tokens": 14147,
+    "uncached_input_tokens": 13767
+  },
+  "reasoning_tokens": 88,
+  "quality": {
+    "passed": true,
+    "checks": {
+      "assignments": true,
+      "rejected": true,
+      "truck_loads": true,
+      "total_revenue": true
+    },
+    "result": {
+      "assignments": [
+        {
+          "order_id": "O01",
+          "truck_id": "T1"
+        },
+        {
+          "order_id": "O02",
+          "truck_id": "T3"
+        },
+        {
+          "order_id": "O03",
+          "truck_id": "T2"
+        },
+        {
+          "order_id": "O04",
+          "truck_id": "T1"
+        },
+        {
+          "order_id": "O06",
+          "truck_id": "T2"
+        },
+        {
+          "order_id": "O07",
+          "truck_id": "T3"
+        },
+        {
+          "order_id": "O08",
+          "truck_id": "T1"
+        }
+      ],
+      "rejected": [
+        {
+          "order_id": "O05",
+          "reason": "capacity"
+        },
+        {
+          "order_id": "O09",
+          "reason": "capacity"
+        },
+        {
+          "order_id": "O10",
+          "reason": "unsupported_zone"
+        },
+        {
+          "order_id": "O11",
+          "reason": "unsupported_temperature"
+        },
+        {
+          "order_id": "O12",
+          "reason": "cancelled"
+        },
+        {
+          "order_id": "O13",
+          "reason": "on_hold"
+        },
+        {
+          "order_id": "O14",
+          "reason": "capacity"
+        }
+      ],
+      "truck_loads": [
+        {
+          "truck_id": "T1",
+          "weight_kg": 1000,
+          "volume_m3": 6
+        },
+        {
+          "truck_id": "T2",
+          "weight_kg": 750,
+          "volume_m3": 5
+        },
+        {
+          "truck_id": "T3",
+          "weight_kg": 600,
+          "volume_m3": 4
+        }
+      ],
+      "total_revenue": 1610
+    }
+  },
+  "execution_error": null,
+  "elapsed_seconds": 9.571,
+  "attempts": 1
+}

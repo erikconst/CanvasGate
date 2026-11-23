@@ -1,0 +1,5 @@
+{
+  "status": false,
+  "confidence": 0,
+  "text": "Unable to read INDEX.md: automatic approval review rejected the read-only shell commands as blocked by policy. The dispatch result cannot be computed without the authoritative inputs."
+}

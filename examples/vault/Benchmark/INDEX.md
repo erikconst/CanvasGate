@@ -1,0 +1,16 @@
+# Dispatch benchmark — English
+
+Solve the medium-complexity dispatch planning task in English using the CURRENT policy, fleet and orders. Ignore superseded and unrelated documents. Follow the deterministic greedy policy exactly; do not optimize it. Return the outer JSON object {status:true, confidence:number, text:string}. The text field must contain ONLY a JSON-encoded dispatch result with keys assignments, rejected, truck_loads, total_revenue. assignments: list of {order_id,truck_id} sorted by order_id. rejected: list of {order_id,reason} sorted by order_id. truck_loads: list of {truck_id,weight_kg,volume_m3} sorted by truck_id, including unused trucks. total_revenue: integer sum of assigned order revenue. Do not include commentary or Markdown fences.
+
+## Authoritative inputs
+Read only these three current notes:
+- [[Policy]] — deterministic dispatch rules
+- [[Fleet]] — three vehicles
+- [[Orders]] — fourteen orders
+
+## Excluded material
+[[Old-policy]] is superseded; [[Marketing]] and [[Warehouse]] are unrelated.
+
+[[workflow.canvas|Open the gated workflow]]
+
+After running, open [[Results/COMPARISON|the measured comparison]].

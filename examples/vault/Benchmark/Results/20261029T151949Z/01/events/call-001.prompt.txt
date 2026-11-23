@@ -1,0 +1,250 @@
+Solve the medium-complexity dispatch planning task in English using the CURRENT policy, fleet and orders. Ignore superseded and unrelated documents. Follow the deterministic greedy policy exactly; do not optimize it. Return the outer JSON object {status:true, confidence:number, text:string}. The text field must contain ONLY a JSON-encoded dispatch result with keys assignments, rejected, truck_loads, total_revenue. assignments: list of {order_id,truck_id} sorted by order_id. rejected: list of {order_id,reason} sorted by order_id. truck_loads: list of {truck_id,weight_kg,volume_m3} sorted by truck_id, including unused trucks. total_revenue: integer sum of assigned order revenue. Do not include commentary or Markdown fences.
+
+Use only this supplied document packet; do not read files or use tools.
+
+--- DOCUMENT: Policy.md ---
+# Current dispatch policy
+Status: CURRENT; version: 2.0; authoritative for this benchmark.
+
+1. Reject status=cancelled with reason `cancelled` and status=hold with reason `on_hold`.
+2. For active orders, identify trucks serving that order's zone. If none, reject `unsupported_zone`.
+3. Within those trucks, filter by supported temperature. If none, reject `unsupported_temperature`.
+4. Process the remaining active orders in ascending (priority, deadline_hour, order_id). Priority 1 is highest.
+5. For each order, examine compatible trucks in ascending truck_id. Assign it to the FIRST truck for which
+   adding its weight AND volume would not exceed the truck's remaining capacity. Equality is allowed.
+6. Never split an order, move a previous assignment, or search for a better solution. If no truck fits, reject `capacity`.
+7. Each truck has one departure; capacities are cumulative over this one batch. There are no reloads.
+8. Sum revenue only for assigned orders. Sort the final output lists as requested in the task.
+
+Use only this current policy, the current fleet, and the current orders. Other notes are background or obsolete.
+
+
+--- DOCUMENT: Fleet.md ---
+# Current fleet
+Status: CURRENT
+
+```json
+[
+  {
+    "truck_id": "T1",
+    "weight_kg": 1000,
+    "volume_m3": 6,
+    "zones": [
+      "east",
+      "west"
+    ],
+    "temperatures": [
+      "ambient",
+      "chilled"
+    ]
+  },
+  {
+    "truck_id": "T2",
+    "weight_kg": 800,
+    "volume_m3": 5,
+    "zones": [
+      "east"
+    ],
+    "temperatures": [
+      "ambient"
+    ]
+  },
+  {
+    "truck_id": "T3",
+    "weight_kg": 600,
+    "volume_m3": 4,
+    "zones": [
+      "west"
+    ],
+    "temperatures": [
+      "ambient",
+      "chilled"
+    ]
+  }
+]
+```
+
+
+--- DOCUMENT: Orders.md ---
+# Current orders
+Status: CURRENT
+
+```json
+[
+  {
+    "order_id": "O01",
+    "priority": 1,
+    "deadline_hour": 9,
+    "zone": "east",
+    "temperature": "chilled",
+    "weight_kg": 700,
+    "volume_m3": 4,
+    "revenue": 500,
+    "status": "active"
+  },
+  {
+    "order_id": "O02",
+    "priority": 1,
+    "deadline_hour": 9,
+    "zone": "west",
+    "temperature": "chilled",
+    "weight_kg": 450,
+    "volume_m3": 3,
+    "revenue": 350,
+    "status": "active"
+  },
+  {
+    "order_id": "O03",
+    "priority": 1,
+    "deadline_hour": 10,
+    "zone": "east",
+    "temperature": "ambient",
+    "weight_kg": 500,
+    "volume_m3": 3,
+    "revenue": 220,
+    "status": "active"
+  },
+  {
+    "order_id": "O04",
+    "priority": 2,
+    "deadline_hour": 10,
+    "zone": "west",
+    "temperature": "ambient",
+    "weight_kg": 250,
+    "volume_m3": 1,
+    "revenue": 180,
+    "status": "active"
+  },
+  {
+    "order_id": "O05",
+    "priority": 2,
+    "deadline_hour": 11,
+    "zone": "east",
+    "temperature": "chilled",
+    "weight_kg": 200,
+    "volume_m3": 1,
+    "revenue": 160,
+    "status": "active"
+  },
+  {
+    "order_id": "O06",
+    "priority": 2,
+    "deadline_hour": 11,
+    "zone": "east",
+    "temperature": "ambient",
+    "weight_kg": 250,
+    "volume_m3": 2,
+    "revenue": 140,
+    "status": "active"
+  },
+  {
+    "order_id": "O07",
+    "priority": 2,
+    "deadline_hour": 12,
+    "zone": "west",
+    "temperature": "chilled",
+    "weight_kg": 150,
+    "volume_m3": 1,
+    "revenue": 130,
+    "status": "active"
+  },
+  {
+    "order_id": "O08",
+    "priority": 3,
+    "deadline_hour": 12,
+    "zone": "east",
+    "temperature": "ambient",
+    "weight_kg": 50,
+    "volume_m3": 1,
+    "revenue": 90,
+    "status": "active"
+  },
+  {
+    "order_id": "O09",
+    "priority": 3,
+    "deadline_hour": 13,
+    "zone": "east",
+    "temperature": "ambient",
+    "weight_kg": 10,
+    "volume_m3": 1,
+    "revenue": 30,
+    "status": "active"
+  },
+  {
+    "order_id": "O10",
+    "priority": 1,
+    "deadline_hour": 8,
+    "zone": "north",
+    "temperature": "ambient",
+    "weight_kg": 100,
+    "volume_m3": 1,
+    "revenue": 100,
+    "status": "active"
+  },
+  {
+    "order_id": "O11",
+    "priority": 1,
+    "deadline_hour": 8,
+    "zone": "east",
+    "temperature": "frozen",
+    "weight_kg": 100,
+    "volume_m3": 1,
+    "revenue": 100,
+    "status": "active"
+  },
+  {
+    "order_id": "O12",
+    "priority": 1,
+    "deadline_hour": 8,
+    "zone": "east",
+    "temperature": "ambient",
+    "weight_kg": 100,
+    "volume_m3": 1,
+    "revenue": 100,
+    "status": "cancelled"
+  },
+  {
+    "order_id": "O13",
+    "priority": 1,
+    "deadline_hour": 8,
+    "zone": "west",
+    "temperature": "ambient",
+    "weight_kg": 100,
+    "volume_m3": 1,
+    "revenue": 100,
+    "status": "hold"
+  },
+  {
+    "order_id": "O14",
+    "priority": 2,
+    "deadline_hour": 10,
+    "zone": "west",
+    "temperature": "ambient",
+    "weight_kg": 1100,
+    "volume_m3": 1,
+    "revenue": 800,
+    "status": "active"
+  }
+]
+```
+
+
+--- DOCUMENT: Old-policy.md ---
+# Historical policy
+Status: SUPERSEDED; version: 1.0; do not use.
+
+The former policy sorted by revenue descending and allowed splitting orders. The previous fleet served north. These historical rules were retired and do not apply to the current batch.
+
+
+--- DOCUMENT: Marketing.md ---
+# Marketing background
+Status: UNRELATED; not a dispatch input.
+
+The business plans to refresh its customer portal, photograph vehicles, and launch a monthly newsletter. Marketing ideas include greener packaging, customer stories, educational videos about refrigerated transport, and a refreshed visual identity. No proposal here changes current capacities, delivery priorities, or supported zones.
+
+
+--- DOCUMENT: Warehouse.md ---
+# Warehouse retrospective
+Status: UNRELATED; not a dispatch input.
+
+The previous quarterly review discussed aisle signs, barcode printers, staff breaks, equipment checks, training, inventory cycle counting and a future packing bench. A tentative second departure and extra cold storage were discussed but never approved. Do not infer extra vehicle capacity or reloads from these discussions.

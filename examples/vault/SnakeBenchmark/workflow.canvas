@@ -1,0 +1,1066 @@
+{
+  "nodes": [
+    {
+      "id": "source-00",
+      "type": "file",
+      "file": "SnakeBenchmark/Model.md",
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-00-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 0,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-00-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 0,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-00-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 0,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-01",
+      "type": "file",
+      "file": "SnakeBenchmark/Animations.md",
+      "x": 0,
+      "y": 220,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-01-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 220,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-01-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 220,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-01-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 220,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-02",
+      "type": "file",
+      "file": "SnakeBenchmark/Contract.md",
+      "x": 0,
+      "y": 440,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-02-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 440,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-02-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 440,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-02-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 440,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-03",
+      "type": "file",
+      "file": "SnakeBenchmark/Old-gltf.md",
+      "x": 0,
+      "y": 660,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-03-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 660,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-03-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 660,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-03-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 660,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-04",
+      "type": "file",
+      "file": "SnakeBenchmark/Old-animation.md",
+      "x": 0,
+      "y": 880,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-04-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 880,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-04-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 880,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-04-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 880,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-05",
+      "type": "file",
+      "file": "SnakeBenchmark/Old-api.md",
+      "x": 0,
+      "y": 1100,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-05-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 1100,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-05-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 1100,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-05-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 1100,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-06",
+      "type": "file",
+      "file": "SnakeBenchmark/Old-sit.md",
+      "x": 0,
+      "y": 1320,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-06-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 1320,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-06-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 1320,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-06-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 1320,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-07",
+      "type": "file",
+      "file": "SnakeBenchmark/Old-death.md",
+      "x": 0,
+      "y": 1540,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-07-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 1540,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-07-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 1540,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-07-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 1540,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-08",
+      "type": "file",
+      "file": "SnakeBenchmark/Old-materials.md",
+      "x": 0,
+      "y": 1760,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-08-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 1760,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-08-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 1760,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-08-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 1760,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-09",
+      "type": "file",
+      "file": "SnakeBenchmark/Marketing.md",
+      "x": 0,
+      "y": 1980,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-09-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 1980,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-09-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 1980,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-09-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 1980,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-10",
+      "type": "file",
+      "file": "SnakeBenchmark/Finance.md",
+      "x": 0,
+      "y": 2200,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-10-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 2200,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-10-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 2200,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-10-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 2200,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-11",
+      "type": "file",
+      "file": "SnakeBenchmark/Events.md",
+      "x": 0,
+      "y": 2420,
+      "width": 320,
+      "height": 170
+    },
+    {
+      "id": "source-11-status",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 420,
+      "y": 2420,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-11-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=snake3d",
+      "x": 840,
+      "y": 2420,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "source-11-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:SnakeInput",
+      "x": 1260,
+      "y": 2420,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "excluded",
+      "type": "text",
+      "text": "JOIN: ANY",
+      "x": 1700,
+      "y": 2640,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "selected",
+      "type": "text",
+      "text": "JOIN: ANY",
+      "x": 1700,
+      "y": 0,
+      "width": 320,
+      "height": 150
+    },
+    {
+      "id": "model",
+      "type": "text",
+      "text": "AGENT:\n{\"prompt\": \"Create a polished, cohesive procedural 3D snake in JavaScript for Three.js r186. Use only the current snake3d specification and honor its module contract and all six animation states. Current notes have YAML status=current and domain=snake3d; selected excerpts repeat those authority fields. Superseded rules and other domains are irrelevant. Return outer JSON with status, confidence, text. The text must be the COMPLETE JavaScript ES module source, without Markdown fences or explanations. No imports: the renderer passes THREE to createSnake. No file changes, tools, network, DOM, timers or random calls. One independent implementation; do not refer to another variant. Keep the source compact, preferably under 300 lines.\", \"max_retries\": 0}",
+      "x": 2120,
+      "y": 0,
+      "width": 500,
+      "height": 400
+    },
+    {
+      "id": "output",
+      "type": "text",
+      "text": "OUTPUT: Procedural snake module",
+      "x": 2740,
+      "y": 0,
+      "width": 320,
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "source-00",
+      "fromSide": "right",
+      "toNode": "source-00-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e1",
+      "fromNode": "source-00-status",
+      "fromSide": "right",
+      "toNode": "source-00-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e2",
+      "fromNode": "source-00-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e3",
+      "fromNode": "source-00-domain",
+      "fromSide": "right",
+      "toNode": "source-00-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e4",
+      "fromNode": "source-00-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e5",
+      "fromNode": "source-00-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e6",
+      "fromNode": "source-01",
+      "fromSide": "right",
+      "toNode": "source-01-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e7",
+      "fromNode": "source-01-status",
+      "fromSide": "right",
+      "toNode": "source-01-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e8",
+      "fromNode": "source-01-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e9",
+      "fromNode": "source-01-domain",
+      "fromSide": "right",
+      "toNode": "source-01-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e10",
+      "fromNode": "source-01-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e11",
+      "fromNode": "source-01-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e12",
+      "fromNode": "source-02",
+      "fromSide": "right",
+      "toNode": "source-02-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e13",
+      "fromNode": "source-02-status",
+      "fromSide": "right",
+      "toNode": "source-02-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e14",
+      "fromNode": "source-02-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e15",
+      "fromNode": "source-02-domain",
+      "fromSide": "right",
+      "toNode": "source-02-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e16",
+      "fromNode": "source-02-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e17",
+      "fromNode": "source-02-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e18",
+      "fromNode": "source-03",
+      "fromSide": "right",
+      "toNode": "source-03-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e19",
+      "fromNode": "source-03-status",
+      "fromSide": "right",
+      "toNode": "source-03-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e20",
+      "fromNode": "source-03-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e21",
+      "fromNode": "source-03-domain",
+      "fromSide": "right",
+      "toNode": "source-03-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e22",
+      "fromNode": "source-03-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e23",
+      "fromNode": "source-03-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e24",
+      "fromNode": "source-04",
+      "fromSide": "right",
+      "toNode": "source-04-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e25",
+      "fromNode": "source-04-status",
+      "fromSide": "right",
+      "toNode": "source-04-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e26",
+      "fromNode": "source-04-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e27",
+      "fromNode": "source-04-domain",
+      "fromSide": "right",
+      "toNode": "source-04-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e28",
+      "fromNode": "source-04-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e29",
+      "fromNode": "source-04-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e30",
+      "fromNode": "source-05",
+      "fromSide": "right",
+      "toNode": "source-05-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e31",
+      "fromNode": "source-05-status",
+      "fromSide": "right",
+      "toNode": "source-05-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e32",
+      "fromNode": "source-05-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e33",
+      "fromNode": "source-05-domain",
+      "fromSide": "right",
+      "toNode": "source-05-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e34",
+      "fromNode": "source-05-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e35",
+      "fromNode": "source-05-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e36",
+      "fromNode": "source-06",
+      "fromSide": "right",
+      "toNode": "source-06-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e37",
+      "fromNode": "source-06-status",
+      "fromSide": "right",
+      "toNode": "source-06-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e38",
+      "fromNode": "source-06-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e39",
+      "fromNode": "source-06-domain",
+      "fromSide": "right",
+      "toNode": "source-06-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e40",
+      "fromNode": "source-06-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e41",
+      "fromNode": "source-06-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e42",
+      "fromNode": "source-07",
+      "fromSide": "right",
+      "toNode": "source-07-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e43",
+      "fromNode": "source-07-status",
+      "fromSide": "right",
+      "toNode": "source-07-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e44",
+      "fromNode": "source-07-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e45",
+      "fromNode": "source-07-domain",
+      "fromSide": "right",
+      "toNode": "source-07-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e46",
+      "fromNode": "source-07-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e47",
+      "fromNode": "source-07-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e48",
+      "fromNode": "source-08",
+      "fromSide": "right",
+      "toNode": "source-08-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e49",
+      "fromNode": "source-08-status",
+      "fromSide": "right",
+      "toNode": "source-08-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e50",
+      "fromNode": "source-08-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e51",
+      "fromNode": "source-08-domain",
+      "fromSide": "right",
+      "toNode": "source-08-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e52",
+      "fromNode": "source-08-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e53",
+      "fromNode": "source-08-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e54",
+      "fromNode": "source-09",
+      "fromSide": "right",
+      "toNode": "source-09-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e55",
+      "fromNode": "source-09-status",
+      "fromSide": "right",
+      "toNode": "source-09-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e56",
+      "fromNode": "source-09-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e57",
+      "fromNode": "source-09-domain",
+      "fromSide": "right",
+      "toNode": "source-09-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e58",
+      "fromNode": "source-09-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e59",
+      "fromNode": "source-09-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e60",
+      "fromNode": "source-10",
+      "fromSide": "right",
+      "toNode": "source-10-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e61",
+      "fromNode": "source-10-status",
+      "fromSide": "right",
+      "toNode": "source-10-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e62",
+      "fromNode": "source-10-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e63",
+      "fromNode": "source-10-domain",
+      "fromSide": "right",
+      "toNode": "source-10-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e64",
+      "fromNode": "source-10-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e65",
+      "fromNode": "source-10-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e66",
+      "fromNode": "source-11",
+      "fromSide": "right",
+      "toNode": "source-11-status",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e67",
+      "fromNode": "source-11-status",
+      "fromSide": "right",
+      "toNode": "source-11-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e68",
+      "fromNode": "source-11-status",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e69",
+      "fromNode": "source-11-domain",
+      "fromSide": "right",
+      "toNode": "source-11-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e70",
+      "fromNode": "source-11-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e71",
+      "fromNode": "source-11-slice",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e72",
+      "fromNode": "selected",
+      "fromSide": "right",
+      "toNode": "model",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e73",
+      "fromNode": "model",
+      "fromSide": "right",
+      "toNode": "output",
+      "toSide": "left",
+      "label": ""
+    }
+  ]
+}

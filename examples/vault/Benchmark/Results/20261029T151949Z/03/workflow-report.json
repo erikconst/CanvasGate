@@ -1,0 +1,164 @@
+{
+  "outcome": "completed",
+  "calls": 1,
+  "nodes": {
+    "policy": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current dispatch policy\nStatus: CURRENT; version: 2.0; authoritative for this benchmark.\n\n1. Reject status=cancelled with reason `cancelled` and status=hold with reason `on_hold`.\n2. For active orders, identify trucks serving that order's zone. If none, reject `unsupported_zone`.\n3. Within those trucks, filter by supported temperature. If none, reject `unsupported_temperature`.\n4. Process the remaining active orders in ascending (priority, deadline_hour, order_id). Priority 1 is highest.\n5. For each order, examine compatible trucks in ascending truck_id. Assign it to the FIRST truck for which\n   adding its weight AND volume would not exceed the truck's remaining capacity. Equality is allowed.\n6. Never split an order, move a previous assignment, or search for a better solution. If no truck fits, reject `capacity`.\n7. Each truck has one departure; capacities are cumulative over this one batch. There are no reloads.\n8. Sum revenue only for assigned orders. Sort the final output lists as requested in the task.\n\nUse only this current policy, the current fleet, and the current orders. Other notes are background or obsolete.\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "fleet": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current fleet\nStatus: CURRENT\n\n```json\n[\n  {\n    \"truck_id\": \"T1\",\n    \"weight_kg\": 1000,\n    \"volume_m3\": 6,\n    \"zones\": [\n      \"east\",\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  },\n  {\n    \"truck_id\": \"T2\",\n    \"weight_kg\": 800,\n    \"volume_m3\": 5,\n    \"zones\": [\n      \"east\"\n    ],\n    \"temperatures\": [\n      \"ambient\"\n    ]\n  },\n  {\n    \"truck_id\": \"T3\",\n    \"weight_kg\": 600,\n    \"volume_m3\": 4,\n    \"zones\": [\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  }\n]\n```\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "orders": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current orders\nStatus: CURRENT\n\n```json\n[\n  {\n    \"order_id\": \"O01\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 700,\n    \"volume_m3\": 4,\n    \"revenue\": 500,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O02\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 450,\n    \"volume_m3\": 3,\n    \"revenue\": 350,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O03\",\n    \"priority\": 1,\n    \"deadline_hour\": 10,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 500,\n    \"volume_m3\": 3,\n    \"revenue\": 220,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O04\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 1,\n    \"revenue\": 180,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O05\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 200,\n    \"volume_m3\": 1,\n    \"revenue\": 160,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O06\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 2,\n    \"revenue\": 140,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O07\",\n    \"priority\": 2,\n    \"deadline_hour\": 12,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 150,\n    \"volume_m3\": 1,\n    \"revenue\": 130,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O08\",\n    \"priority\": 3,\n    \"deadline_hour\": 12,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 50,\n    \"volume_m3\": 1,\n    \"revenue\": 90,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O09\",\n    \"priority\": 3,\n    \"deadline_hour\": 13,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 10,\n    \"volume_m3\": 1,\n    \"revenue\": 30,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O10\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"north\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O11\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"frozen\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O12\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"cancelled\"\n  },\n  {\n    \"order_id\": \"O13\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"hold\"\n  },\n  {\n    \"order_id\": \"O14\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 1100,\n    \"volume_m3\": 1,\n    \"revenue\": 800,\n    \"status\": \"active\"\n  }\n]\n```\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "old-policy": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Historical policy\nStatus: SUPERSEDED; version: 1.0; do not use.\n\nThe former policy sorted by revenue descending and allowed splitting orders. The previous fleet served north. These historical rules were retired and do not apply to the current batch.\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "old-policy-off": {
+      "state": "done",
+      "status": false,
+      "confidence": 1,
+      "text": "Excluded: superseded or unrelated source.",
+      "attempts": 0,
+      "reason": ""
+    },
+    "marketing": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Marketing background\nStatus: UNRELATED; not a dispatch input.\n\nThe business plans to refresh its customer portal, photograph vehicles, and launch a monthly newsletter. Marketing ideas include greener packaging, customer stories, educational videos about refrigerated transport, and a refreshed visual identity. No proposal here changes current capacities, delivery priorities, or supported zones.\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "marketing-off": {
+      "state": "done",
+      "status": false,
+      "confidence": 1,
+      "text": "Excluded: superseded or unrelated source.",
+      "attempts": 0,
+      "reason": ""
+    },
+    "warehouse": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Warehouse retrospective\nStatus: UNRELATED; not a dispatch input.\n\nThe previous quarterly review discussed aisle signs, barcode printers, staff breaks, equipment checks, training, inventory cycle counting and a future packing bench. A tentative second departure and extra cold storage were discussed but never approved. Do not infer extra vehicle capacity or reloads from these discussions.\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "warehouse-off": {
+      "state": "done",
+      "status": false,
+      "confidence": 1,
+      "text": "Excluded: superseded or unrelated source.",
+      "attempts": 0,
+      "reason": ""
+    },
+    "policy-check": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current dispatch policy\nStatus: CURRENT; version: 2.0; authoritative for this benchmark.\n\n1. Reject status=cancelled with reason `cancelled` and status=hold with reason `on_hold`.\n2. For active orders, identify trucks serving that order's zone. If none, reject `unsupported_zone`.\n3. Within those trucks, filter by supported temperature. If none, reject `unsupported_temperature`.\n4. Process the remaining active orders in ascending (priority, deadline_hour, order_id). Priority 1 is highest.\n5. For each order, examine compatible trucks in ascending truck_id. Assign it to the FIRST truck for which\n   adding its weight AND volume would not exceed the truck's remaining capacity. Equality is allowed.\n6. Never split an order, move a previous assignment, or search for a better solution. If no truck fits, reject `capacity`.\n7. Each truck has one departure; capacities are cumulative over this one batch. There are no reloads.\n8. Sum revenue only for assigned orders. Sort the final output lists as requested in the task.\n\nUse only this current policy, the current fleet, and the current orders. Other notes are background or obsolete.\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "fleet-check": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current fleet\nStatus: CURRENT\n\n```json\n[\n  {\n    \"truck_id\": \"T1\",\n    \"weight_kg\": 1000,\n    \"volume_m3\": 6,\n    \"zones\": [\n      \"east\",\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  },\n  {\n    \"truck_id\": \"T2\",\n    \"weight_kg\": 800,\n    \"volume_m3\": 5,\n    \"zones\": [\n      \"east\"\n    ],\n    \"temperatures\": [\n      \"ambient\"\n    ]\n  },\n  {\n    \"truck_id\": \"T3\",\n    \"weight_kg\": 600,\n    \"volume_m3\": 4,\n    \"zones\": [\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  }\n]\n```\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "orders-check": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current orders\nStatus: CURRENT\n\n```json\n[\n  {\n    \"order_id\": \"O01\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 700,\n    \"volume_m3\": 4,\n    \"revenue\": 500,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O02\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 450,\n    \"volume_m3\": 3,\n    \"revenue\": 350,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O03\",\n    \"priority\": 1,\n    \"deadline_hour\": 10,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 500,\n    \"volume_m3\": 3,\n    \"revenue\": 220,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O04\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 1,\n    \"revenue\": 180,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O05\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 200,\n    \"volume_m3\": 1,\n    \"revenue\": 160,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O06\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 2,\n    \"revenue\": 140,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O07\",\n    \"priority\": 2,\n    \"deadline_hour\": 12,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 150,\n    \"volume_m3\": 1,\n    \"revenue\": 130,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O08\",\n    \"priority\": 3,\n    \"deadline_hour\": 12,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 50,\n    \"volume_m3\": 1,\n    \"revenue\": 90,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O09\",\n    \"priority\": 3,\n    \"deadline_hour\": 13,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 10,\n    \"volume_m3\": 1,\n    \"revenue\": 30,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O10\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"north\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O11\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"frozen\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O12\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"cancelled\"\n  },\n  {\n    \"order_id\": \"O13\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"hold\"\n  },\n  {\n    \"order_id\": \"O14\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 1100,\n    \"volume_m3\": 1,\n    \"revenue\": 800,\n    \"status\": \"active\"\n  }\n]\n```\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "old-policy-gate": {
+      "state": "done",
+      "status": false,
+      "confidence": 0.0,
+      "text": "",
+      "attempts": 0,
+      "reason": "Condițiile de intrare sunt false."
+    },
+    "marketing-gate": {
+      "state": "done",
+      "status": false,
+      "confidence": 0.0,
+      "text": "",
+      "attempts": 0,
+      "reason": "Condițiile de intrare sunt false."
+    },
+    "warehouse-gate": {
+      "state": "done",
+      "status": false,
+      "confidence": 0.0,
+      "text": "",
+      "attempts": 0,
+      "reason": "Condițiile de intrare sunt false."
+    },
+    "ready": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current dispatch policy\nStatus: CURRENT; version: 2.0; authoritative for this benchmark.\n\n1. Reject status=cancelled with reason `cancelled` and status=hold with reason `on_hold`.\n2. For active orders, identify trucks serving that order's zone. If none, reject `unsupported_zone`.\n3. Within those trucks, filter by supported temperature. If none, reject `unsupported_temperature`.\n4. Process the remaining active orders in ascending (priority, deadline_hour, order_id). Priority 1 is highest.\n5. For each order, examine compatible trucks in ascending truck_id. Assign it to the FIRST truck for which\n   adding its weight AND volume would not exceed the truck's remaining capacity. Equality is allowed.\n6. Never split an order, move a previous assignment, or search for a better solution. If no truck fits, reject `capacity`.\n7. Each truck has one departure; capacities are cumulative over this one batch. There are no reloads.\n8. Sum revenue only for assigned orders. Sort the final output lists as requested in the task.\n\nUse only this current policy, the current fleet, and the current orders. Other notes are background or obsolete.\n\n\n# Current fleet\nStatus: CURRENT\n\n```json\n[\n  {\n    \"truck_id\": \"T1\",\n    \"weight_kg\": 1000,\n    \"volume_m3\": 6,\n    \"zones\": [\n      \"east\",\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  },\n  {\n    \"truck_id\": \"T2\",\n    \"weight_kg\": 800,\n    \"volume_m3\": 5,\n    \"zones\": [\n      \"east\"\n    ],\n    \"temperatures\": [\n      \"ambient\"\n    ]\n  },\n  {\n    \"truck_id\": \"T3\",\n    \"weight_kg\": 600,\n    \"volume_m3\": 4,\n    \"zones\": [\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  }\n]\n```\n\n\n# Current orders\nStatus: CURRENT\n\n```json\n[\n  {\n    \"order_id\": \"O01\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 700,\n    \"volume_m3\": 4,\n    \"revenue\": 500,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O02\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 450,\n    \"volume_m3\": 3,\n    \"revenue\": 350,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O03\",\n    \"priority\": 1,\n    \"deadline_hour\": 10,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 500,\n    \"volume_m3\": 3,\n    \"revenue\": 220,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O04\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 1,\n    \"revenue\": 180,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O05\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 200,\n    \"volume_m3\": 1,\n    \"revenue\": 160,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O06\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 2,\n    \"revenue\": 140,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O07\",\n    \"priority\": 2,\n    \"deadline_hour\": 12,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 150,\n    \"volume_m3\": 1,\n    \"revenue\": 130,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O08\",\n    \"priority\": 3,\n    \"deadline_hour\": 12,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 50,\n    \"volume_m3\": 1,\n    \"revenue\": 90,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O09\",\n    \"priority\": 3,\n    \"deadline_hour\": 13,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 10,\n    \"volume_m3\": 1,\n    \"revenue\": 30,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O10\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"north\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O11\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"frozen\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O12\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"cancelled\"\n  },\n  {\n    \"order_id\": \"O13\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"hold\"\n  },\n  {\n    \"order_id\": \"O14\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 1100,\n    \"volume_m3\": 1,\n    \"revenue\": 800,\n    \"status\": \"active\"\n  }\n]\n```\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "selected": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "# Current dispatch policy\nStatus: CURRENT; version: 2.0; authoritative for this benchmark.\n\n1. Reject status=cancelled with reason `cancelled` and status=hold with reason `on_hold`.\n2. For active orders, identify trucks serving that order's zone. If none, reject `unsupported_zone`.\n3. Within those trucks, filter by supported temperature. If none, reject `unsupported_temperature`.\n4. Process the remaining active orders in ascending (priority, deadline_hour, order_id). Priority 1 is highest.\n5. For each order, examine compatible trucks in ascending truck_id. Assign it to the FIRST truck for which\n   adding its weight AND volume would not exceed the truck's remaining capacity. Equality is allowed.\n6. Never split an order, move a previous assignment, or search for a better solution. If no truck fits, reject `capacity`.\n7. Each truck has one departure; capacities are cumulative over this one batch. There are no reloads.\n8. Sum revenue only for assigned orders. Sort the final output lists as requested in the task.\n\nUse only this current policy, the current fleet, and the current orders. Other notes are background or obsolete.\n\n\n# Current fleet\nStatus: CURRENT\n\n```json\n[\n  {\n    \"truck_id\": \"T1\",\n    \"weight_kg\": 1000,\n    \"volume_m3\": 6,\n    \"zones\": [\n      \"east\",\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  },\n  {\n    \"truck_id\": \"T2\",\n    \"weight_kg\": 800,\n    \"volume_m3\": 5,\n    \"zones\": [\n      \"east\"\n    ],\n    \"temperatures\": [\n      \"ambient\"\n    ]\n  },\n  {\n    \"truck_id\": \"T3\",\n    \"weight_kg\": 600,\n    \"volume_m3\": 4,\n    \"zones\": [\n      \"west\"\n    ],\n    \"temperatures\": [\n      \"ambient\",\n      \"chilled\"\n    ]\n  }\n]\n```\n\n\n# Current orders\nStatus: CURRENT\n\n```json\n[\n  {\n    \"order_id\": \"O01\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 700,\n    \"volume_m3\": 4,\n    \"revenue\": 500,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O02\",\n    \"priority\": 1,\n    \"deadline_hour\": 9,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 450,\n    \"volume_m3\": 3,\n    \"revenue\": 350,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O03\",\n    \"priority\": 1,\n    \"deadline_hour\": 10,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 500,\n    \"volume_m3\": 3,\n    \"revenue\": 220,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O04\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 1,\n    \"revenue\": 180,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O05\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 200,\n    \"volume_m3\": 1,\n    \"revenue\": 160,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O06\",\n    \"priority\": 2,\n    \"deadline_hour\": 11,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 250,\n    \"volume_m3\": 2,\n    \"revenue\": 140,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O07\",\n    \"priority\": 2,\n    \"deadline_hour\": 12,\n    \"zone\": \"west\",\n    \"temperature\": \"chilled\",\n    \"weight_kg\": 150,\n    \"volume_m3\": 1,\n    \"revenue\": 130,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O08\",\n    \"priority\": 3,\n    \"deadline_hour\": 12,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 50,\n    \"volume_m3\": 1,\n    \"revenue\": 90,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O09\",\n    \"priority\": 3,\n    \"deadline_hour\": 13,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 10,\n    \"volume_m3\": 1,\n    \"revenue\": 30,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O10\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"north\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O11\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"frozen\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"active\"\n  },\n  {\n    \"order_id\": \"O12\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"east\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"cancelled\"\n  },\n  {\n    \"order_id\": \"O13\",\n    \"priority\": 1,\n    \"deadline_hour\": 8,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 100,\n    \"volume_m3\": 1,\n    \"revenue\": 100,\n    \"status\": \"hold\"\n  },\n  {\n    \"order_id\": \"O14\",\n    \"priority\": 2,\n    \"deadline_hour\": 10,\n    \"zone\": \"west\",\n    \"temperature\": \"ambient\",\n    \"weight_kg\": 1100,\n    \"volume_m3\": 1,\n    \"revenue\": 800,\n    \"status\": \"active\"\n  }\n]\n```\n",
+      "attempts": 0,
+      "reason": ""
+    },
+    "dispatch": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "{\"assignments\":[{\"order_id\":\"O01\",\"truck_id\":\"T1\"},{\"order_id\":\"O02\",\"truck_id\":\"T3\"},{\"order_id\":\"O03\",\"truck_id\":\"T2\"},{\"order_id\":\"O04\",\"truck_id\":\"T1\"},{\"order_id\":\"O06\",\"truck_id\":\"T2\"},{\"order_id\":\"O07\",\"truck_id\":\"T3\"},{\"order_id\":\"O08\",\"truck_id\":\"T1\"}],\"rejected\":[{\"order_id\":\"O05\",\"reason\":\"capacity\"},{\"order_id\":\"O09\",\"reason\":\"capacity\"},{\"order_id\":\"O10\",\"reason\":\"unsupported_zone\"},{\"order_id\":\"O11\",\"reason\":\"unsupported_temperature\"},{\"order_id\":\"O12\",\"reason\":\"cancelled\"},{\"order_id\":\"O13\",\"reason\":\"on_hold\"},{\"order_id\":\"O14\",\"reason\":\"capacity\"}],\"truck_loads\":[{\"truck_id\":\"T1\",\"weight_kg\":1000,\"volume_m3\":6},{\"truck_id\":\"T2\",\"weight_kg\":750,\"volume_m3\":5},{\"truck_id\":\"T3\",\"weight_kg\":600,\"volume_m3\":4}],\"total_revenue\":1610}",
+      "attempts": 1,
+      "reason": ""
+    },
+    "output": {
+      "state": "done",
+      "status": true,
+      "confidence": 1.0,
+      "text": "{\"assignments\":[{\"order_id\":\"O01\",\"truck_id\":\"T1\"},{\"order_id\":\"O02\",\"truck_id\":\"T3\"},{\"order_id\":\"O03\",\"truck_id\":\"T2\"},{\"order_id\":\"O04\",\"truck_id\":\"T1\"},{\"order_id\":\"O06\",\"truck_id\":\"T2\"},{\"order_id\":\"O07\",\"truck_id\":\"T3\"},{\"order_id\":\"O08\",\"truck_id\":\"T1\"}],\"rejected\":[{\"order_id\":\"O05\",\"reason\":\"capacity\"},{\"order_id\":\"O09\",\"reason\":\"capacity\"},{\"order_id\":\"O10\",\"reason\":\"unsupported_zone\"},{\"order_id\":\"O11\",\"reason\":\"unsupported_temperature\"},{\"order_id\":\"O12\",\"reason\":\"cancelled\"},{\"order_id\":\"O13\",\"reason\":\"on_hold\"},{\"order_id\":\"O14\",\"reason\":\"capacity\"}],\"truck_loads\":[{\"truck_id\":\"T1\",\"weight_kg\":1000,\"volume_m3\":6},{\"truck_id\":\"T2\",\"weight_kg\":750,\"volume_m3\":5},{\"truck_id\":\"T3\",\"weight_kg\":600,\"volume_m3\":4}],\"total_revenue\":1610}",
+      "attempts": 0,
+      "reason": ""
+    }
+  },
+  "outputs": {
+    "output": {
+      "name": "English dispatch plan",
+      "text": "{\"assignments\":[{\"order_id\":\"O01\",\"truck_id\":\"T1\"},{\"order_id\":\"O02\",\"truck_id\":\"T3\"},{\"order_id\":\"O03\",\"truck_id\":\"T2\"},{\"order_id\":\"O04\",\"truck_id\":\"T1\"},{\"order_id\":\"O06\",\"truck_id\":\"T2\"},{\"order_id\":\"O07\",\"truck_id\":\"T3\"},{\"order_id\":\"O08\",\"truck_id\":\"T1\"}],\"rejected\":[{\"order_id\":\"O05\",\"reason\":\"capacity\"},{\"order_id\":\"O09\",\"reason\":\"capacity\"},{\"order_id\":\"O10\",\"reason\":\"unsupported_zone\"},{\"order_id\":\"O11\",\"reason\":\"unsupported_temperature\"},{\"order_id\":\"O12\",\"reason\":\"cancelled\"},{\"order_id\":\"O13\",\"reason\":\"on_hold\"},{\"order_id\":\"O14\",\"reason\":\"capacity\"}],\"truck_loads\":[{\"truck_id\":\"T1\",\"weight_kg\":1000,\"volume_m3\":6},{\"truck_id\":\"T2\",\"weight_kg\":750,\"volume_m3\":5},{\"truck_id\":\"T3\",\"weight_kg\":600,\"volume_m3\":4}],\"total_revenue\":1610}"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"brief","type":"file","file":"brief.md","x":0,"y":0,"width":350,"height":260},
+		{"id":"permission","type":"text","text":"DATA:\n{\"status\":true,\"confidence\":1,\"text\":\"Brief approved for processing.\"}","x":0,"y":320,"width":350,"height":190},
+		{"id":"input-check","type":"text","text":"GATE: WORDS\n{\"min_words\":10,\"max_words\":200}","x":440,"y":0,"width":300,"height":150},
+		{"id":"ready","type":"text","text":"GATE: AND","x":830,"y":180,"width":250,"height":140},
+		{"id":"summarize","type":"text","text":"CODEX:\n{\"prompt\":\"Summarize the brief in English using 4–60 words. Return status, confidence and text.\",\"min_words\":4,\"max_words\":60,\"min_confidence\":0.8,\"max_retries\":2}","x":1170,"y":130,"width":370,"height":280},
+		{"id":"accepted","type":"text","text":"GATE: CONFIDENCE\n{\"min_confidence\":0.8}","x":1630,"y":170,"width":300,"height":170},
+		{"id":"result","type":"text","text":"OUTPUT: Accepted summary","x":2020,"y":170,"width":300,"height":170}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"brief","fromSide":"right","toNode":"input-check","toSide":"left"},
+		{"id":"e2","fromNode":"input-check","fromSide":"right","toNode":"ready","toSide":"left"},
+		{"id":"e3","fromNode":"permission","fromSide":"right","toNode":"ready","toSide":"left"},
+		{"id":"e4","fromNode":"ready","fromSide":"right","toNode":"summarize","toSide":"left"},
+		{"id":"e5","fromNode":"summarize","fromSide":"right","toNode":"accepted","toSide":"left"},
+		{"id":"e6","fromNode":"accepted","fromSide":"right","toNode":"result","toSide":"left"}
+	]
+}

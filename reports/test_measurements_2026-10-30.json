@@ -1,0 +1,673 @@
+{
+  "report_date": "2026-10-30",
+  "generated_at_utc": "2026-11-23T12:05:30.367152+00:00",
+  "measured_model_invocations": 14,
+  "totals": {
+    "input_tokens": 267730,
+    "cached_input_tokens": 56832,
+    "output_tokens": 18143,
+    "total_tokens": 285873,
+    "uncached_input_tokens": 210898
+  },
+  "failed_invocations": 2,
+  "failed_tokens": 81436,
+  "unmetered_real_invocations": [
+    {
+      "source": "runs/20261029T150149Z-bbd43db138/report.json",
+      "calls": 1,
+      "outcome": "completed",
+      "usage": null
+    }
+  ],
+  "measured_calls": [
+    {
+      "suite": "Dispatch: 6 notes",
+      "phase": "final",
+      "variant": 1,
+      "usage": {
+        "input_tokens": 13581,
+        "cached_input_tokens": 0,
+        "output_tokens": 410,
+        "total_tokens": 13991,
+        "uncached_input_tokens": 13581,
+        "reasoning_output_tokens": 118
+      },
+      "reasoning_tokens": 118,
+      "elapsed_seconds": 13.534,
+      "quality": "PASS",
+      "source": "examples/vault/Benchmark/Results/20261029T151949Z/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 6 notes",
+      "phase": "final",
+      "variant": 2,
+      "usage": {
+        "input_tokens": 12821,
+        "cached_input_tokens": 0,
+        "output_tokens": 433,
+        "total_tokens": 13254,
+        "uncached_input_tokens": 12821,
+        "reasoning_output_tokens": 141
+      },
+      "reasoning_tokens": 141,
+      "elapsed_seconds": 14.065,
+      "quality": "PASS",
+      "source": "examples/vault/Benchmark/Results/20261029T151949Z/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 6 notes",
+      "phase": "final",
+      "variant": 3,
+      "usage": {
+        "input_tokens": 13115,
+        "cached_input_tokens": 0,
+        "output_tokens": 379,
+        "total_tokens": 13494,
+        "uncached_input_tokens": 13115,
+        "reasoning_output_tokens": 85
+      },
+      "reasoning_tokens": 85,
+      "elapsed_seconds": 11.042,
+      "quality": "PASS",
+      "source": "examples/vault/Benchmark/Results/20261029T151949Z/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 6 notes",
+      "phase": "blocked preliminary attempt",
+      "variant": 2,
+      "usage": {
+        "input_tokens": 67548,
+        "cached_input_tokens": 45568,
+        "output_tokens": 236,
+        "total_tokens": 67784,
+        "uncached_input_tokens": 21980,
+        "reasoning_output_tokens": 70
+      },
+      "reasoning_tokens": 70,
+      "elapsed_seconds": 16.996,
+      "quality": "FAIL",
+      "source": "examples/vault/Benchmark/Results/20261029T151949Z/excluded-attempts.json"
+    },
+    {
+      "suite": "Dispatch: 30 notes",
+      "phase": "initial fixture",
+      "variant": 1,
+      "usage": {
+        "input_tokens": 27190,
+        "cached_input_tokens": 0,
+        "output_tokens": 444,
+        "total_tokens": 27634,
+        "uncached_input_tokens": 27190
+      },
+      "reasoning_tokens": 152,
+      "elapsed_seconds": 11.827,
+      "quality": "PASS",
+      "source": "examples/vault/StressBenchmark/Results/20261029T160003Z-7a07214f/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 30 notes",
+      "phase": "initial fixture",
+      "variant": 2,
+      "usage": {
+        "input_tokens": 13767,
+        "cached_input_tokens": 0,
+        "output_tokens": 380,
+        "total_tokens": 14147,
+        "uncached_input_tokens": 13767
+      },
+      "reasoning_tokens": 88,
+      "elapsed_seconds": 9.571,
+      "quality": "PASS",
+      "source": "examples/vault/StressBenchmark/Results/20261029T160003Z-7a07214f/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 30 notes",
+      "phase": "initial fixture",
+      "variant": 3,
+      "usage": {
+        "input_tokens": 13429,
+        "cached_input_tokens": 0,
+        "output_tokens": 223,
+        "total_tokens": 13652,
+        "uncached_input_tokens": 13429
+      },
+      "reasoning_tokens": 157,
+      "elapsed_seconds": 12.033,
+      "quality": "FAIL",
+      "source": "examples/vault/StressBenchmark/Results/20261029T160003Z-7a07214f/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 30 notes",
+      "phase": "corrected fixture",
+      "variant": 1,
+      "usage": {
+        "input_tokens": 28076,
+        "cached_input_tokens": 0,
+        "output_tokens": 423,
+        "total_tokens": 28499,
+        "uncached_input_tokens": 28076
+      },
+      "reasoning_tokens": 131,
+      "elapsed_seconds": 11.079,
+      "quality": "PASS",
+      "source": "examples/vault/StressBenchmark/Results/20261029T160336Z-5ecee342/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 30 notes",
+      "phase": "corrected fixture",
+      "variant": 2,
+      "usage": {
+        "input_tokens": 13304,
+        "cached_input_tokens": 0,
+        "output_tokens": 385,
+        "total_tokens": 13689,
+        "uncached_input_tokens": 13304
+      },
+      "reasoning_tokens": 93,
+      "elapsed_seconds": 9.222,
+      "quality": "PASS",
+      "source": "examples/vault/StressBenchmark/Results/20261029T160336Z-5ecee342/measurements.json"
+    },
+    {
+      "suite": "Dispatch: 30 notes",
+      "phase": "corrected fixture",
+      "variant": 3,
+      "usage": {
+        "input_tokens": 13776,
+        "cached_input_tokens": 0,
+        "output_tokens": 381,
+        "total_tokens": 14157,
+        "uncached_input_tokens": 13776
+      },
+      "reasoning_tokens": 87,
+      "elapsed_seconds": 8.108,
+      "quality": "PASS",
+      "source": "examples/vault/StressBenchmark/Results/20261029T160336Z-5ecee342/measurements.json"
+    },
+    {
+      "suite": "CanvasGate integration",
+      "phase": "real smoke test",
+      "variant": null,
+      "usage": {
+        "input_tokens": 11961,
+        "cached_input_tokens": 11264,
+        "output_tokens": 309,
+        "total_tokens": 12270,
+        "uncached_input_tokens": 697,
+        "reasoning_output_tokens": 0
+      },
+      "reasoning_tokens": 0,
+      "elapsed_seconds": 15.097,
+      "quality": "COMMITTED",
+      "source": "examples/vault/CanvasGate/Runs/20261029T154433Z-e138a36597/report.json"
+    },
+    {
+      "suite": "Three.js snake",
+      "phase": "final",
+      "variant": 1,
+      "usage": {
+        "input_tokens": 13824,
+        "cached_input_tokens": 0,
+        "output_tokens": 4294,
+        "total_tokens": 18118,
+        "uncached_input_tokens": 13824,
+        "reasoning_output_tokens": 1002
+      },
+      "reasoning_tokens": 1002,
+      "elapsed_seconds": 101.251,
+      "quality": "ENGINEERING PASS",
+      "source": "benchmarks/snake/runs/20261030T072558Z-f2a184cd/measurements.json"
+    },
+    {
+      "suite": "Three.js snake",
+      "phase": "final",
+      "variant": 2,
+      "usage": {
+        "input_tokens": 12425,
+        "cached_input_tokens": 0,
+        "output_tokens": 4890,
+        "total_tokens": 17315,
+        "uncached_input_tokens": 12425,
+        "reasoning_output_tokens": 1410
+      },
+      "reasoning_tokens": 1410,
+      "elapsed_seconds": 151.063,
+      "quality": "ENGINEERING PASS",
+      "source": "benchmarks/snake/runs/20261030T072558Z-f2a184cd/measurements.json"
+    },
+    {
+      "suite": "Three.js snake",
+      "phase": "final",
+      "variant": 3,
+      "usage": {
+        "input_tokens": 12913,
+        "cached_input_tokens": 0,
+        "output_tokens": 4956,
+        "total_tokens": 17869,
+        "uncached_input_tokens": 12913,
+        "reasoning_output_tokens": 1379
+      },
+      "reasoning_tokens": 1379,
+      "elapsed_seconds": 87.745,
+      "quality": "ENGINEERING PASS",
+      "source": "benchmarks/snake/runs/20261030T072558Z-f2a184cd/measurements.json"
+    }
+  ],
+  "saved_simulations": [
+    {
+      "source": "runs/20261029T150131Z-9d114a6206/report.json",
+      "calls": 1,
+      "outcome": "completed"
+    },
+    {
+      "source": "examples/vault/CanvasGate/Runs/20261029T154407Z-2a45908bf3/report.json",
+      "calls": 1,
+      "outcome": "completed"
+    },
+    {
+      "source": "examples/vault/Rezultate/20261029T150937Z-26d5572b56/report.json",
+      "calls": 1,
+      "outcome": "completed"
+    },
+    {
+      "source": "examples/vault/Rezultate/20261029T151151Z-80124da020/report.json",
+      "calls": 1,
+      "outcome": "completed"
+    }
+  ],
+  "local_test_snapshot": {
+    "tests": 60,
+    "passed": 60,
+    "failures": 0,
+    "errors": 0,
+    "duration_seconds": 1.113,
+    "command": "python -m unittest discover -s tests -q",
+    "evidence": "Command executed successfully during report compilation; no model calls.",
+    "test_ids": [
+      "test_benchmark.MeasurementTests.test_missing_usage_is_unavailable_not_zero",
+      "test_benchmark.MeasurementTests.test_oracle_matches_hand_calculated_dispatch",
+      "test_benchmark.MeasurementTests.test_quality_check_detects_wrong_load_even_with_confidence_one",
+      "test_benchmark.MeasurementTests.test_usage_events_are_recorded_and_cache_is_not_double_counted",
+      "test_canvasgate.CanvasGateTests.test_backend_capabilities_checked_before_any_calls",
+      "test_canvasgate.CanvasGateTests.test_cli_dry_run_and_transactional_preview",
+      "test_canvasgate.CanvasGateTests.test_code_only_validates_python_syntax_before_forwarding",
+      "test_canvasgate.CanvasGateTests.test_context_limit_and_transport_failure_stop_without_retry",
+      "test_canvasgate.CanvasGateTests.test_critical_false_gate_discards_previously_staged_write",
+      "test_canvasgate.CanvasGateTests.test_exact_switch_labels_are_case_sensitive",
+      "test_canvasgate.CanvasGateTests.test_factory_preserves_legacy_graphs",
+      "test_canvasgate.CanvasGateTests.test_false_yaml_route_preserves_payload_for_review",
+      "test_canvasgate.CanvasGateTests.test_if_else_join_executes_only_active_branch",
+      "test_canvasgate.CanvasGateTests.test_invalid_graphs_and_paths_are_preflight_errors",
+      "test_canvasgate.CanvasGateTests.test_join_all_requires_all_branches_any_does_not",
+      "test_canvasgate.CanvasGateTests.test_lines_and_yaml_typed_slices",
+      "test_canvasgate.CanvasGateTests.test_missing_slice_never_calls_agent",
+      "test_canvasgate.CanvasGateTests.test_preview_and_duplicate_run_id_do_not_append_twice",
+      "test_canvasgate.CanvasGateTests.test_recovery_required_is_reported_when_rollback_also_fails",
+      "test_canvasgate.CanvasGateTests.test_retry_budget_and_json_validation",
+      "test_canvasgate.CanvasGateTests.test_shared_budget_prevents_second_agent",
+      "test_canvasgate.CanvasGateTests.test_source_edit_during_agent_prevents_stale_commit",
+      "test_canvasgate.CanvasGateTests.test_yaml_section_boundary_does_not_send_unrelated_context",
+      "test_canvasgate.MarkdownTests.test_section_skips_fenced_code_headings_and_ambiguity",
+      "test_canvasgate.MarkdownTests.test_typed_yaml_and_duplicate_keys",
+      "test_canvasgate.ProviderTests.test_router_aggregates_codex_and_api_usage_without_network",
+      "test_canvasgate.TransactionTests.test_committed_transaction_cannot_be_crash_rolled_back",
+      "test_canvasgate.TransactionTests.test_crash_recovery_restores_partial_commit_and_is_repeatable",
+      "test_canvasgate.TransactionTests.test_lock_serializes_writers",
+      "test_canvasgate.TransactionTests.test_mid_commit_os_error_restores_both_originals",
+      "test_canvasgate.TransactionTests.test_new_file_removed_when_later_write_fails",
+      "test_canvasgate.TransactionTests.test_recovery_does_not_overwrite_external_edit",
+      "test_canvasgate.TransactionTests.test_staging_conflict_never_overwrites_external_edit",
+      "test_canvasgate.TransactionTests.test_staging_is_memory_only_and_combines_mutations_in_order",
+      "test_snake_benchmark.SnakeBenchmarkTests.test_gates_preserve_all_animation_and_contract_requirements",
+      "test_stress_benchmark.StressBenchmarkTests.test_api_retains_real_usage_reasoning_and_never_logs_credentials",
+      "test_stress_benchmark.StressBenchmarkTests.test_corpus_contains_actual_conflicts_and_typed_filtering_removes_them",
+      "test_workflow.BackendTests.test_api_incomplete_response_is_failure",
+      "test_workflow.BackendTests.test_api_sends_no_tools_history_or_vault_access",
+      "test_workflow.BackendTests.test_cli_argv_uses_stdin_and_separate_temporary_cwd",
+      "test_workflow.WorkflowTests.test_cli_dry_run_and_report",
+      "test_workflow.WorkflowTests.test_closed_gate_makes_zero_calls",
+      "test_workflow.WorkflowTests.test_context_limit_blocks_before_call",
+      "test_workflow.WorkflowTests.test_cycle_rejected_before_execution",
+      "test_workflow.WorkflowTests.test_example_canvas",
+      "test_workflow.WorkflowTests.test_file_vault_boundary",
+      "test_workflow.WorkflowTests.test_gate_checks_and_not",
+      "test_workflow.WorkflowTests.test_global_budget_is_shared_by_distinct_model_nodes",
+      "test_workflow.WorkflowTests.test_global_budget_overrides_retries",
+      "test_workflow.WorkflowTests.test_invalid_config_is_preflight_error",
+      "test_workflow.WorkflowTests.test_invalid_edges_and_duplicate_ids",
+      "test_workflow.WorkflowTests.test_markdown_file_source",
+      "test_workflow.WorkflowTests.test_not_cannot_revive_skipped_branch",
+      "test_workflow.WorkflowTests.test_retry_exhaustion_never_publishes_failed_output",
+      "test_workflow.WorkflowTests.test_retry_has_feedback_and_stops_at_valid_response",
+      "test_workflow.WorkflowTests.test_routing_does_not_increase_confidence",
+      "test_workflow.WorkflowTests.test_schema_rejects_nan_bool_confidence_and_extras",
+      "test_workflow.WorkflowTests.test_success_forwards_only_selected_context",
+      "test_workflow.WorkflowTests.test_transport_error_is_not_retried",
+      "test_workflow.WorkflowTests.test_zero_budget_never_calls_model"
+    ]
+  },
+  "browser_test_snapshot": {
+    "qa": [
+      {
+        "variant": 1,
+        "passed": true,
+        "passed_count": 17,
+        "check_count": 17,
+        "checks": [
+          {
+            "name": "Six declared states",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Required factory contract",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Named head and body",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Renderable model",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Finite geometry in all six states",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Model fits common stage scale",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Vertex budget",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Deterministic state transitions",
+            "passed": true,
+            "detail": "Same time/state after shuffled calls"
+          },
+          {
+            "name": "Six distinct animation trajectories",
+            "passed": true,
+            "detail": "Includes strike peak and recovery; a recovered attack may share a slow pose at one instant"
+          },
+          {
+            "name": "Slow and fast animate",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Fast motion exceeds slow",
+            "passed": true,
+            "detail": "Observed motion ratio 2.76×; geometric proxy, not direct frequency measurement"
+          },
+          {
+            "name": "Sleep is quieter than slow",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Death becomes static",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Forward attack lunge",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Sit raises the head",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Stable mesh and resource counts",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Owned resources disposed",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "measurements": {
+          "slow_motion": 0.003880774442182428,
+          "fast_motion": 0.010698990094619438,
+          "sleep_motion": 3.0252239621611095e-05,
+          "fast_slow_ratio": 2.756921396493906,
+          "attack_extension": 0.7623777756727201,
+          "sit_elevation": 0.9632534949063052
+        }
+      },
+      {
+        "variant": 2,
+        "passed": true,
+        "passed_count": 17,
+        "check_count": 17,
+        "checks": [
+          {
+            "name": "Six declared states",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Required factory contract",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Named head and body",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Renderable model",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Finite geometry in all six states",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Model fits common stage scale",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Vertex budget",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Deterministic state transitions",
+            "passed": true,
+            "detail": "Same time/state after shuffled calls"
+          },
+          {
+            "name": "Six distinct animation trajectories",
+            "passed": true,
+            "detail": "Includes strike peak and recovery; a recovered attack may share a slow pose at one instant"
+          },
+          {
+            "name": "Slow and fast animate",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Fast motion exceeds slow",
+            "passed": true,
+            "detail": "Observed motion ratio 2.76×; geometric proxy, not direct frequency measurement"
+          },
+          {
+            "name": "Sleep is quieter than slow",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Death becomes static",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Forward attack lunge",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Sit raises the head",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Stable mesh and resource counts",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Owned resources disposed",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "measurements": {
+          "slow_motion": 0.002823152267861071,
+          "fast_motion": 0.007792829966668523,
+          "sleep_motion": 2.269948786177282e-05,
+          "fast_slow_ratio": 2.7603293153481485,
+          "attack_extension": 0.8600001335144043,
+          "sit_elevation": 0.910285010933876
+        }
+      },
+      {
+        "variant": 3,
+        "passed": true,
+        "passed_count": 17,
+        "check_count": 17,
+        "checks": [
+          {
+            "name": "Six declared states",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Required factory contract",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Named head and body",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Renderable model",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Finite geometry in all six states",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Model fits common stage scale",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Vertex budget",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Deterministic state transitions",
+            "passed": true,
+            "detail": "Same time/state after shuffled calls"
+          },
+          {
+            "name": "Six distinct animation trajectories",
+            "passed": true,
+            "detail": "Includes strike peak and recovery; a recovered attack may share a slow pose at one instant"
+          },
+          {
+            "name": "Slow and fast animate",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Fast motion exceeds slow",
+            "passed": true,
+            "detail": "Observed motion ratio 2.79×; geometric proxy, not direct frequency measurement"
+          },
+          {
+            "name": "Sleep is quieter than slow",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Death becomes static",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Forward attack lunge",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Sit raises the head",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Stable mesh and resource counts",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "Owned resources disposed",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "measurements": {
+          "slow_motion": 0.0025063383032051917,
+          "fast_motion": 0.006991715460148124,
+          "sleep_motion": 3.143452104933529e-05,
+          "fast_slow_ratio": 2.789613617286572,
+          "attack_extension": 0.8599999999999999,
+          "sit_elevation": 0.968333392373253
+        }
+      }
+    ],
+    "errors": []
+  },
+  "source_sha256": {
+    "examples/vault/Benchmark/Results/20261029T151949Z/measurements.json": "4b66fdf3e9ea6e469ff94c51139bf2594e2e7c13bde45e01f7c3c1b43d5b8577",
+    "examples/vault/Benchmark/Results/20261029T151949Z/excluded-attempts.json": "ed46f6e75aeff91d3fe15aee26cc63dcc7e34655a7d4452310a98dfac2dfbbeb",
+    "examples/vault/StressBenchmark/Results/20261029T160003Z-7a07214f/measurements.json": "68651a3a80a9fdfd03f5c420b2fc01b424181b9b08d092c99581755d1966809b",
+    "examples/vault/StressBenchmark/Results/20261029T160336Z-5ecee342/measurements.json": "1bd11450837753ecea1be11e60e8a83cdd3fcf50719ba31248511ba595f893e4",
+    "benchmarks/snake/runs/20261030T072558Z-f2a184cd/measurements.json": "175045237a8228063f734d556ee81a318c6efa52824e8cc9f63ec9a299303b75",
+    "benchmarks/snake/runs/20261030T072558Z-f2a184cd/browser-checks.json": "3363fc6e8a1c231b4ac0e9ae7dab5e73b891d6a64d37af5dda883b042a7d8910",
+    "examples/vault/CanvasGate/Runs/20261029T154433Z-e138a36597/report.json": "b042a3e8bdb23d3fe38e5579ee6cacdcbcad48a295f1fcf5f067cedd460d2f18",
+    "examples/vault/CanvasGate/Runs/smoke-events/provider-1/call-001.metrics.json": "fc3ea392a745b359f7f6588b8b3add5ab9697babcd971357772c5170431e2670",
+    "runs/20261029T150149Z-bbd43db138/report.json": "189a439b23c2512198716f9a8402fca8687457f0e465972db1cc9ae9349e07ff",
+    "runs/20261029T150131Z-9d114a6206/report.json": "b018ee7c69b35431c4e4e17240c213a02638a00a5565bd02600cd5f1c8d857e3",
+    "examples/vault/CanvasGate/Runs/20261029T154407Z-2a45908bf3/report.json": "85905a3158e9966d5a3ee422d55f4edc5cca422e048c4ab3f642f69792e61160",
+    "examples/vault/Rezultate/20261029T150937Z-26d5572b56/report.json": "6da10c21d1ef218ae95a8bc333c02eb1fd84b4dd5173902f4e96ddb5375e7722",
+    "examples/vault/Rezultate/20261029T151151Z-80124da020/report.json": "eb381384dc7d259317a757fe6a922e8848bdf2d715a00cc0dc5adec04984d684",
+    "reports/historical_test_snapshot.json": "e53b577cbbfd87a0679ef421177201f00369cec2b8c53ba6d5f946448932b4fe"
+  }
+}

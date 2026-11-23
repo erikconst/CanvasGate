@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CanvasGate Studio</title><link rel="icon" href="data:,"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/workbench.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="workspace"><div><strong>Workspace</strong><span id="vault-label">Connecting…</span></div><button id="choose-vault" class="button small" hidden>Open vault…</button></div>
+    <div class="sidebar-section"><span>Workflows</span><button id="new-flow" title="Create workflow" aria-label="Create workflow">+</button></div>
+    <input id="workflow-search" class="sidebar-search" type="search" placeholder="Find a workflow…" aria-label="Find a workflow">
+    <div id="workflow-list" class="workflow-list"></div>
+  </aside>
+  <div class="app">
+    <header class="topbar"><div class="brand"><span class="brand-icon">CG</span><span>CanvasGate <span class="brand-sub">STUDIO</span></span></div>
+      <nav aria-label="Main navigation"><button class="nav active" data-view="graph">Workflow</button><button class="nav" data-view="runs">History <b id="run-count">0</b></button><button class="nav" data-view="sources">Sources</button><button class="nav" data-view="agents">Agents <b id="agent-count">0</b></button><button id="help" class="nav" data-view="help" type="button">Help</button></nav>
+      <div class="top-actions"><button id="import-flow" class="button quiet">Import</button><button id="export-flow" class="button quiet">Export</button><button id="save-flow" class="button">Save</button><span class="separator"></span><button id="validate" class="button" aria-label="Validate workflow">Validate</button><button id="run" class="button primary" aria-label="Run workflow">▶ Run</button></div>
+    </header>
+    <section id="notice" class="notice" hidden role="status"><span></span><button aria-label="Dismiss notification">×</button></section>
+    <section id="graph-view" class="view active">
+      <div class="graph-heading"><div class="graph-heading-label"><h1 id="graph-title">Workflow</h1><span class="badge muted" id="dirty-badge">Saved</span><span id="workflow-name" hidden></span><span id="graph-subtitle" hidden></span></div><div class="graph-heading-right"><span class="badge" id="validation-badge">Not validated</span><span id="graph-count"></span></div></div>
+      <div class="editor-layout">
+        <section class="canvas-area" aria-label="Graph editor"><div class="canvas-toolbar"><div class="toolbar-left"><button id="add-node" class="button small">＋ Add node</button><button id="connect" class="button small">↗ Connect</button><button id="fit" class="button small">Fit view</button></div><div id="snapshot-banner" class="snapshot-banner" hidden><span>Snapshot · read only</span><button id="use-draft">Use as draft</button></div><span id="canvas-hint">Drag a node to arrange · scroll to zoom</span></div>
+          <div id="viewport" class="viewport" tabindex="0" aria-label="Workflow canvas"><div id="world" class="world"><svg id="edges" width="1" height="1" aria-hidden="true"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="currentColor"/></marker></defs><g id="edge-paths"></g></svg><div id="nodes"></div></div><div id="empty-graph" class="empty-graph" hidden>Add a source node to start your workflow.</div></div>
+          <div class="canvas-footer"><div class="legend"><span><i class="dot source"></i>Source</span><span><i class="dot gate"></i>Gate / slice</span><span><i class="dot agent"></i>Agent</span><span><i class="dot write"></i>Output</span></div><div class="zoom-controls"><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-value" title="Reset canvas zoom to 100%" aria-label="Reset canvas zoom to 100%">80%</button><button id="zoom-in" aria-label="Zoom in">+</button></div></div>
+        </section>
+        <aside class="inspector" aria-label="Node inspector"><div class="inspector-heading"><div><span class="eyebrow">INSPECTOR</span><h2 id="inspector-title">Select a node</h2></div><span id="inspector-kind" class="badge muted">NODE</span></div><div class="inspector-tabs" role="tablist"><button data-tab="node" class="active">Node</button><button data-tab="contract">Contract</button><button data-tab="decision">Decision</button><button data-tab="inputs">Inputs</button></div><div id="inspector-body" class="inspector-body"><div class="empty-state">Select a node to inspect its configuration and context.</div></div></aside>
+      </div>
+      <section class="execution-panel"><div class="execution-title"><div><span class="eyebrow">EXECUTION</span><h2 id="execution-label">Ready when you are</h2></div><div class="execution-actions"><span id="execution-mode" class="badge muted">No run selected</span><button id="replay" class="button small" disabled>↺ Replay</button><button id="resume" class="button small" disabled>Resume</button><button id="snapshot-export" class="button small" disabled>Snapshot</button></div></div><div id="execution-body" class="execution-body"><div class="execution-empty"><span class="check-circle">✓</span><div><strong>Start with a simulation</strong><p>Validate contracts, inspect decisions, and preview writes without using model tokens.</p></div><span class="zero-pill">0 model tokens</span></div></div></section>
+    </section>
+    <section id="runs-view" class="view"><div class="page-heading"><div class="eyebrow">IMMUTABLE EVIDENCE</div><h1>Run history</h1><p>Snapshots, recorded responses and the reason behind every decision.</p></div><div class="summary-cards" id="run-summary"></div><div class="panel"><div class="panel-title"><h2>All runs</h2><button id="refresh-runs" class="button small">Refresh</button></div><div class="table-wrap"><table class="runs-table"><thead><tr><th>Run / workflow</th><th>State</th><th>Mode</th><th>Tokens</th><th>Snapshot</th><th>Started</th><th></th></tr></thead><tbody id="runs-body"></tbody></table></div></div></section>
+    <section id="sources-view" class="view"><div class="page-heading"><div class="eyebrow">YOUR LOCAL KNOWLEDGE</div><h1>Sources</h1><p>Changes are checked against their original hash. Source pins are updated only when you request it.</p></div><div class="source-layout"><div class="panel source-list-panel"><input id="source-search" type="search" placeholder="Search source files…" aria-label="Search source files"><div id="source-list"></div></div><div class="panel source-editor-panel"><div class="panel-title"><div><h2 id="source-title">Select a source</h2><code id="source-sha"></code></div><button id="save-source" class="button primary" disabled>Save source</button></div><textarea id="source-editor" spellcheck="false" placeholder="Select a Markdown or JSON source to edit it." aria-label="Source content"></textarea><div class="editor-note">Saving a source does not silently update any contract's version or hash.</div></div></div></section>
+    <section id="agents-view" class="view">
+      <div class="page-heading"><div><h1>Agents</h1><p>Connect an MCP client to inspect and validate workflows in the open vault.</p></div><button id="refresh-agents" class="button">Refresh</button></div>
+      <div id="agents-list" class="agents-list" aria-live="polite"></div>
+      <section id="agent-guides" class="panel agent-guides" hidden>
+        <h2>MCP guides</h2>
+        <details><summary>Setup and use</summary><pre id="mcp-user-guide"></pre></details>
+        <details><summary>Instructions for agents</summary><pre id="mcp-agent-guide"></pre></details>
+      </section>
+    </section>
+    <section id="help-view" class="view">
+      <header class="page-heading"><h1>Help &amp; guides</h1></header>
+      <div class="guide-toolbar">
+        <label for="guide-file">Guide</label>
+        <select id="guide-file">
+          <option value="USER_GUIDE.md">User guide</option>
+          <option value="HOW_IT_WORKS.md">How it works</option>
+        </select>
+        <button id="download-guide" class="button" disabled>Download Markdown</button>
+      </div>
+      <article id="guide-content" class="guide-content panel" lang="en"></article>
+    </section>
+    <footer class="app-footer"><span><span class="local-dot"></span> Local engine</span><span id="footer-status">Ready</span><span>CanvasGate 0.4.1</span></footer>
+  </div>
+  <dialog id="modal"><form id="modal-form"><div class="modal-heading"><div><div id="modal-eyebrow" class="eyebrow">CANVASGATE STUDIO</div><h2 id="modal-title"></h2></div><button type="button" id="modal-close" class="icon-button" aria-label="Close dialog">×</button></div><div id="modal-body"></div><div class="modal-actions"><button type="button" id="modal-cancel" class="button">Cancel</button><button type="submit" id="modal-submit" class="button primary">Continue</button></div></form></dialog>
+  <input id="import-file" type="file" accept=".canvas,.json" hidden>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

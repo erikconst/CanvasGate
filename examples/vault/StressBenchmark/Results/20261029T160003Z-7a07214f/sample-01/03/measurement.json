@@ -1,0 +1,22 @@
+{
+  "variant": 3,
+  "transport": "cli",
+  "model": "gpt-6.1-sol",
+  "usage": {
+    "input_tokens": 13429,
+    "cached_input_tokens": 0,
+    "output_tokens": 223,
+    "total_tokens": 13652,
+    "uncached_input_tokens": 13429
+  },
+  "reasoning_tokens": 157,
+  "quality": {
+    "passed": false,
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "execution_error": "dispatch: Agent validation failed: Expecting value: line 1 column 1 (char 0)",
+  "elapsed_seconds": 12.033,
+  "attempts": 1,
+  "passed_slices": 3,
+  "excluded_sources": 27
+}

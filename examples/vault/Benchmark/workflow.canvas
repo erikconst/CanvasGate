@@ -1,0 +1,303 @@
+{
+  "nodes": [
+    {
+      "id": "policy",
+      "type": "file",
+      "file": "Benchmark/Policy.md",
+      "x": 0,
+      "y": 0,
+      "width": 340,
+      "height": 240
+    },
+    {
+      "id": "policy-check",
+      "type": "text",
+      "text": "GATE: REGEX\n{\"pattern\":\"Status: CURRENT\"}",
+      "x": 420,
+      "y": 0,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "fleet",
+      "type": "file",
+      "file": "Benchmark/Fleet.md",
+      "x": 0,
+      "y": 280,
+      "width": 340,
+      "height": 240
+    },
+    {
+      "id": "fleet-check",
+      "type": "text",
+      "text": "GATE: REGEX\n{\"pattern\":\"Status: CURRENT\"}",
+      "x": 420,
+      "y": 280,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "orders",
+      "type": "file",
+      "file": "Benchmark/Orders.md",
+      "x": 0,
+      "y": 560,
+      "width": 340,
+      "height": 240
+    },
+    {
+      "id": "orders-check",
+      "type": "text",
+      "text": "GATE: REGEX\n{\"pattern\":\"Status: CURRENT\"}",
+      "x": 420,
+      "y": 560,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "old-policy",
+      "type": "file",
+      "file": "Benchmark/Old-policy.md",
+      "x": 0,
+      "y": 840,
+      "width": 340,
+      "height": 240
+    },
+    {
+      "id": "old-policy-off",
+      "type": "text",
+      "text": "DATA:\n{\"status\":false,\"confidence\":1,\"text\":\"Excluded: superseded or unrelated source.\"}",
+      "x": 420,
+      "y": 840,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "old-policy-gate",
+      "type": "text",
+      "text": "GATE: AND",
+      "x": 830,
+      "y": 840,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "marketing",
+      "type": "file",
+      "file": "Benchmark/Marketing.md",
+      "x": 0,
+      "y": 1120,
+      "width": 340,
+      "height": 240
+    },
+    {
+      "id": "marketing-off",
+      "type": "text",
+      "text": "DATA:\n{\"status\":false,\"confidence\":1,\"text\":\"Excluded: superseded or unrelated source.\"}",
+      "x": 420,
+      "y": 1120,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "marketing-gate",
+      "type": "text",
+      "text": "GATE: AND",
+      "x": 830,
+      "y": 1120,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "warehouse",
+      "type": "file",
+      "file": "Benchmark/Warehouse.md",
+      "x": 0,
+      "y": 1400,
+      "width": 340,
+      "height": 240
+    },
+    {
+      "id": "warehouse-off",
+      "type": "text",
+      "text": "DATA:\n{\"status\":false,\"confidence\":1,\"text\":\"Excluded: superseded or unrelated source.\"}",
+      "x": 420,
+      "y": 1400,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "warehouse-gate",
+      "type": "text",
+      "text": "GATE: AND",
+      "x": 830,
+      "y": 1400,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "ready",
+      "type": "text",
+      "text": "GATE: AND",
+      "x": 830,
+      "y": 280,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "selected",
+      "type": "text",
+      "text": "GATE: OR",
+      "x": 1240,
+      "y": 280,
+      "width": 340,
+      "height": 230
+    },
+    {
+      "id": "dispatch",
+      "type": "text",
+      "text": "CODEX:\n{\"prompt\": \"Solve the medium-complexity dispatch planning task in English using the CURRENT policy, fleet and orders. Ignore superseded and unrelated documents. Follow the deterministic greedy policy exactly; do not optimize it. Return the outer JSON object {status:true, confidence:number, text:string}. The text field must contain ONLY a JSON-encoded dispatch result with keys assignments, rejected, truck_loads, total_revenue. assignments: list of {order_id,truck_id} sorted by order_id. rejected: list of {order_id,reason} sorted by order_id. truck_loads: list of {truck_id,weight_kg,volume_m3} sorted by truck_id, including unused trucks. total_revenue: integer sum of assigned order revenue. Do not include commentary or Markdown fences.\", \"max_retries\": 0, \"pattern\": \"total_revenue\"}",
+      "x": 1650,
+      "y": 280,
+      "width": 520,
+      "height": 420
+    },
+    {
+      "id": "output",
+      "type": "text",
+      "text": "OUTPUT: English dispatch plan",
+      "x": 2270,
+      "y": 280,
+      "width": 340,
+      "height": 230
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "policy",
+      "fromSide": "right",
+      "toNode": "policy-check",
+      "toSide": "left"
+    },
+    {
+      "id": "e1",
+      "fromNode": "policy-check",
+      "fromSide": "right",
+      "toNode": "ready",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "fleet",
+      "fromSide": "right",
+      "toNode": "fleet-check",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "fleet-check",
+      "fromSide": "right",
+      "toNode": "ready",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "orders",
+      "fromSide": "right",
+      "toNode": "orders-check",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "orders-check",
+      "fromSide": "right",
+      "toNode": "ready",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "old-policy",
+      "fromSide": "right",
+      "toNode": "old-policy-gate",
+      "toSide": "left"
+    },
+    {
+      "id": "e7",
+      "fromNode": "old-policy-off",
+      "fromSide": "right",
+      "toNode": "old-policy-gate",
+      "toSide": "left"
+    },
+    {
+      "id": "e8",
+      "fromNode": "old-policy-gate",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left"
+    },
+    {
+      "id": "e9",
+      "fromNode": "marketing",
+      "fromSide": "right",
+      "toNode": "marketing-gate",
+      "toSide": "left"
+    },
+    {
+      "id": "e10",
+      "fromNode": "marketing-off",
+      "fromSide": "right",
+      "toNode": "marketing-gate",
+      "toSide": "left"
+    },
+    {
+      "id": "e11",
+      "fromNode": "marketing-gate",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left"
+    },
+    {
+      "id": "e12",
+      "fromNode": "warehouse",
+      "fromSide": "right",
+      "toNode": "warehouse-gate",
+      "toSide": "left"
+    },
+    {
+      "id": "e13",
+      "fromNode": "warehouse-off",
+      "fromSide": "right",
+      "toNode": "warehouse-gate",
+      "toSide": "left"
+    },
+    {
+      "id": "e14",
+      "fromNode": "warehouse-gate",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left"
+    },
+    {
+      "id": "e15",
+      "fromNode": "ready",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left"
+    },
+    {
+      "id": "e16",
+      "fromNode": "selected",
+      "fromSide": "right",
+      "toNode": "dispatch",
+      "toSide": "left"
+    },
+    {
+      "id": "e17",
+      "fromNode": "dispatch",
+      "fromSide": "right",
+      "toNode": "output",
+      "toSide": "left"
+    }
+  ]
+}

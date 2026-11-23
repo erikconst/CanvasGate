@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canvasgate"
+version = "0.4.1"
+description = "Deterministic Obsidian Canvas gates for bounded Codex calls"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "erikconst", email = "erikconstantinescu@gmail.com"}]
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0,<7", "jsonschema>=4.23,<5"]
+
+[project.urls]
+Homepage = "https://github.com/erikconst/canvasgate"
+Repository = "https://github.com/erikconst/canvasgate"
+
+[project.scripts]
+canvasgate = "canvasgate.cli:main"
+canvasgate-studio = "canvasgate.web:main"
+canvasgate-mcp = "canvasgate.mcp_server:main"
+
+[tool.setuptools.packages.find]
+include = ["canvasgate*"]
+
+[tool.setuptools.package-data]
+canvasgate = ["webui/*.html", "webui/*.css", "webui/*.js", "MCP_*.md", "docs/*.md"]

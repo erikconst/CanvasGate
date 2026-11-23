@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Snake Lab · CanvasGate</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/controls/OrbitControls.js":"./vendor/OrbitControls.js"}}</script>
+</head>
+<body>
+  <main>
+    <header>
+      <a class="brand" href="./"><span class="brandmark">∿</span> CANVASGATE <span class="brand-suffix">/ EXPERIMENTS</span></a>
+      <span class="live"><span></span> LOCAL THREE.JS STUDIO</span>
+    </header>
+    <section class="intro">
+      <div><div class="eyebrow">EXPERIMENT 03 · PROCEDURAL MODELING</div><h1>One snake. <span>Three approaches.</span></h1>
+        <p>The same English brief, six animation states and three independent model sessions.<br>Identical lighting, camera and time. Explore the differences.</p></div>
+      <div class="intro-meta"><strong>06</strong><span>animation<br>states</span><i></i><strong>03</strong><span>independent<br>snakes</span></div>
+    </section>
+    <section class="controls" aria-label="Animation controls">
+      <div class="state-buttons" role="group" aria-label="Animation state">
+        <button data-state="slow" class="active">Slow</button><button data-state="fast">Fast</button><button data-state="attack">Attack</button>
+        <button data-state="sleep">Sleep</button><button data-state="sit">Sit</button><button data-state="death">Death</button>
+      </div>
+      <div class="play-controls"><button id="play" aria-label="Pause animation">Ⅱ Pause</button><button id="restart">↺ Restart</button><button id="reset">Reset views</button></div>
+    </section>
+    <section class="models" id="models" aria-label="Three snake models"></section>
+    <section class="timeline">
+      <span id="state-caption">Slow · relaxed serpentine motion</span>
+      <label>TIME <input id="time" aria-label="Animation time" type="range" min="0" max="6" step="0.01" value="0"><output id="time-value">0.00 s</output></label>
+      <label>SPEED <select id="speed" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+    </section>
+    <section class="evidence">
+      <div class="evidence-heading"><div class="eyebrow">MEASURED, NOT ESTIMATED</div><h2>Execution & behavior</h2><p>Token totals include the generated JavaScript. Engineering checks do not grade artistic quality.</p></div>
+      <div id="comparison" class="comparison"></div>
+    </section>
+    <details class="qa"><summary>Inspect automated checks <span id="qa-status">Pending verification</span></summary><div id="qa-results"></div></details>
+    <footer><span>Drag to orbit · Scroll to zoom · All controls apply to all three snakes</span><a id="report" href="#">Full benchmark report ↗</a></footer>
+  </main>
+  <script type="module" src="lab.mjs"></script>
+</body>
+</html>

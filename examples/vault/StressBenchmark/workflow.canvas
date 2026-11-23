@@ -1,0 +1,3088 @@
+{
+  "nodes": [
+    {
+      "id": "source-00",
+      "type": "file",
+      "file": "StressBenchmark/Archive-01-fleet.md",
+      "x": 0,
+      "y": 0,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-00-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 0,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-00-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 0,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-00-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 0,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-00-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 0,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-01",
+      "type": "file",
+      "file": "StressBenchmark/Department-03-training.md",
+      "x": 0,
+      "y": 240,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-01-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-01-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-01-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-01-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-02",
+      "type": "file",
+      "file": "StressBenchmark/Archive-06-policy.md",
+      "x": 0,
+      "y": 480,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-02-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-02-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-02-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-02-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-03",
+      "type": "file",
+      "file": "StressBenchmark/Department-05-customer-research.md",
+      "x": 0,
+      "y": 720,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-03-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-03-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-03-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-03-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-04",
+      "type": "file",
+      "file": "StressBenchmark/Archive-05-policy.md",
+      "x": 0,
+      "y": 960,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-04-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-04-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-04-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-04-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-05",
+      "type": "file",
+      "file": "StressBenchmark/Archive-02-orders.md",
+      "x": 0,
+      "y": 1200,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-05-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 1200,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-05-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 1200,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-05-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 1200,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-05-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 1200,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-06",
+      "type": "file",
+      "file": "StressBenchmark/Department-04-facilities.md",
+      "x": 0,
+      "y": 1440,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-06-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 1440,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-06-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 1440,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-06-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 1440,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-06-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 1440,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-07",
+      "type": "file",
+      "file": "StressBenchmark/Archive-02-policy.md",
+      "x": 0,
+      "y": 1680,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-07-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 1680,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-07-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 1680,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-07-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 1680,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-07-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 1680,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-08",
+      "type": "file",
+      "file": "StressBenchmark/Department-01-marketing.md",
+      "x": 0,
+      "y": 1920,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-08-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 1920,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-08-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 1920,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-08-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 1920,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-08-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 1920,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-09",
+      "type": "file",
+      "file": "StressBenchmark/Archive-02-fleet.md",
+      "x": 0,
+      "y": 2160,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-09-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 2160,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-09-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 2160,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-09-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 2160,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-09-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 2160,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-10",
+      "type": "file",
+      "file": "StressBenchmark/Department-09-events.md",
+      "x": 0,
+      "y": 2400,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-10-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 2400,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-10-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 2400,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-10-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 2400,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-10-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 2400,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-11",
+      "type": "file",
+      "file": "StressBenchmark/Archive-01-orders.md",
+      "x": 0,
+      "y": 2640,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-11-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 2640,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-11-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 2640,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-11-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 2640,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-11-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 2640,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-12",
+      "type": "file",
+      "file": "StressBenchmark/Archive-06-orders.md",
+      "x": 0,
+      "y": 2880,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-12-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 2880,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-12-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 2880,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-12-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 2880,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-12-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 2880,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-13",
+      "type": "file",
+      "file": "StressBenchmark/Department-02-procurement.md",
+      "x": 0,
+      "y": 3120,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-13-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 3120,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-13-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 3120,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-13-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 3120,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-13-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 3120,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-14",
+      "type": "file",
+      "file": "StressBenchmark/Archive-03-fleet.md",
+      "x": 0,
+      "y": 3360,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-14-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 3360,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-14-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 3360,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-14-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 3360,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-14-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 3360,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-15",
+      "type": "file",
+      "file": "StressBenchmark/Archive-04-orders.md",
+      "x": 0,
+      "y": 3600,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-15-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 3600,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-15-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 3600,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-15-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 3600,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-15-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 3600,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-16",
+      "type": "file",
+      "file": "StressBenchmark/Archive-01-policy.md",
+      "x": 0,
+      "y": 3840,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-16-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 3840,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-16-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 3840,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-16-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 3840,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-16-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 3840,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-17",
+      "type": "file",
+      "file": "StressBenchmark/Current-fleet.md",
+      "x": 0,
+      "y": 4080,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-17-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 4080,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-17-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 4080,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-17-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 4080,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-17-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 4080,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-18",
+      "type": "file",
+      "file": "StressBenchmark/Current-policy.md",
+      "x": 0,
+      "y": 4320,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-18-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 4320,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-18-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 4320,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-18-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 4320,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-18-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 4320,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-19",
+      "type": "file",
+      "file": "StressBenchmark/Archive-04-fleet.md",
+      "x": 0,
+      "y": 4560,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-19-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 4560,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-19-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 4560,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-19-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 4560,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-19-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 4560,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-20",
+      "type": "file",
+      "file": "StressBenchmark/Archive-04-policy.md",
+      "x": 0,
+      "y": 4800,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-20-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 4800,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-20-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 4800,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-20-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 4800,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-20-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 4800,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-21",
+      "type": "file",
+      "file": "StressBenchmark/Department-07-finance.md",
+      "x": 0,
+      "y": 5040,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-21-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 5040,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-21-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 5040,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-21-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 5040,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-21-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 5040,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-22",
+      "type": "file",
+      "file": "StressBenchmark/Archive-05-fleet.md",
+      "x": 0,
+      "y": 5280,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-22-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 5280,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-22-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 5280,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-22-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 5280,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-22-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 5280,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-23",
+      "type": "file",
+      "file": "StressBenchmark/Department-08-hiring.md",
+      "x": 0,
+      "y": 5520,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-23-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 5520,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-23-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 5520,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-23-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 5520,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-23-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 5520,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-24",
+      "type": "file",
+      "file": "StressBenchmark/Archive-03-policy.md",
+      "x": 0,
+      "y": 5760,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-24-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 5760,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-24-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 5760,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-24-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 5760,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-24-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 5760,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-25",
+      "type": "file",
+      "file": "StressBenchmark/Department-06-design.md",
+      "x": 0,
+      "y": 6000,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-25-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 6000,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-25-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 6000,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-25-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 6000,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-25-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 6000,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-26",
+      "type": "file",
+      "file": "StressBenchmark/Archive-06-fleet.md",
+      "x": 0,
+      "y": 6240,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-26-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 6240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-26-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 6240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-26-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 6240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-26-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 6240,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-27",
+      "type": "file",
+      "file": "StressBenchmark/Archive-03-orders.md",
+      "x": 0,
+      "y": 6480,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-27-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 6480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-27-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 6480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-27-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 6480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-27-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 6480,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-28",
+      "type": "file",
+      "file": "StressBenchmark/Current-orders.md",
+      "x": 0,
+      "y": 6720,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-28-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 6720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-28-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 6720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-28-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 6720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-28-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 6720,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-29",
+      "type": "file",
+      "file": "StressBenchmark/Archive-05-orders.md",
+      "x": 0,
+      "y": 6960,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "id": "source-29-current",
+      "type": "text",
+      "text": "GATE: YAML_EQ:status=current",
+      "x": 440,
+      "y": 6960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-29-domain",
+      "type": "text",
+      "text": "GATE: YAML_EQ:domain=dispatch",
+      "x": 880,
+      "y": 6960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-29-slice",
+      "type": "text",
+      "text": "SLICE: SECTION:DispatchInput",
+      "x": 1320,
+      "y": 6960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "source-29-nonempty",
+      "type": "text",
+      "text": "GATE: WORDS\n{\"min_words\":40}",
+      "x": 1740,
+      "y": 6960,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "excluded",
+      "type": "text",
+      "text": "JOIN: ANY",
+      "x": 2180,
+      "y": 7200,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "selected",
+      "type": "text",
+      "text": "JOIN: ANY",
+      "x": 2180,
+      "y": 0,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "dispatch",
+      "type": "text",
+      "text": "AGENT:\n{\"prompt\": \"Solve the medium-complexity dispatch planning task in English using the CURRENT policy, fleet and orders. Ignore superseded and unrelated documents. Follow the deterministic greedy policy exactly; do not optimize it. Return the outer JSON object {status:true, confidence:number, text:string}. The text field must contain ONLY a JSON-encoded dispatch result with keys assignments, rejected, truck_loads, total_revenue. assignments: list of {order_id,truck_id} sorted by order_id. rejected: list of {order_id,reason} sorted by order_id. truck_loads: list of {truck_id,weight_kg,volume_m3} sorted by truck_id, including unused trucks. total_revenue: integer sum of assigned order revenue. Do not include commentary or Markdown fences. Authoritative sources have YAML status: current AND domain: dispatch. Other domains and superseded revisions are not authoritative.\", \"schema\": \"json\", \"max_retries\": 0}",
+      "x": 2620,
+      "y": 0,
+      "width": 500,
+      "height": 420
+    },
+    {
+      "id": "output",
+      "type": "text",
+      "text": "OUTPUT: Checked dispatch candidate",
+      "x": 3220,
+      "y": 0,
+      "width": 340,
+      "height": 160
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "source-00",
+      "fromSide": "right",
+      "toNode": "source-00-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e1",
+      "fromNode": "source-00-current",
+      "fromSide": "right",
+      "toNode": "source-00-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e2",
+      "fromNode": "source-00-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e3",
+      "fromNode": "source-00-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e4",
+      "fromNode": "source-00-domain",
+      "fromSide": "right",
+      "toNode": "source-00-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e5",
+      "fromNode": "source-00-slice",
+      "fromSide": "right",
+      "toNode": "source-00-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e6",
+      "fromNode": "source-00-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e7",
+      "fromNode": "source-01",
+      "fromSide": "right",
+      "toNode": "source-01-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e8",
+      "fromNode": "source-01-current",
+      "fromSide": "right",
+      "toNode": "source-01-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e9",
+      "fromNode": "source-01-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e10",
+      "fromNode": "source-01-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e11",
+      "fromNode": "source-01-domain",
+      "fromSide": "right",
+      "toNode": "source-01-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e12",
+      "fromNode": "source-01-slice",
+      "fromSide": "right",
+      "toNode": "source-01-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e13",
+      "fromNode": "source-01-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e14",
+      "fromNode": "source-02",
+      "fromSide": "right",
+      "toNode": "source-02-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e15",
+      "fromNode": "source-02-current",
+      "fromSide": "right",
+      "toNode": "source-02-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e16",
+      "fromNode": "source-02-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e17",
+      "fromNode": "source-02-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e18",
+      "fromNode": "source-02-domain",
+      "fromSide": "right",
+      "toNode": "source-02-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e19",
+      "fromNode": "source-02-slice",
+      "fromSide": "right",
+      "toNode": "source-02-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e20",
+      "fromNode": "source-02-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e21",
+      "fromNode": "source-03",
+      "fromSide": "right",
+      "toNode": "source-03-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e22",
+      "fromNode": "source-03-current",
+      "fromSide": "right",
+      "toNode": "source-03-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e23",
+      "fromNode": "source-03-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e24",
+      "fromNode": "source-03-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e25",
+      "fromNode": "source-03-domain",
+      "fromSide": "right",
+      "toNode": "source-03-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e26",
+      "fromNode": "source-03-slice",
+      "fromSide": "right",
+      "toNode": "source-03-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e27",
+      "fromNode": "source-03-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e28",
+      "fromNode": "source-04",
+      "fromSide": "right",
+      "toNode": "source-04-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e29",
+      "fromNode": "source-04-current",
+      "fromSide": "right",
+      "toNode": "source-04-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e30",
+      "fromNode": "source-04-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e31",
+      "fromNode": "source-04-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e32",
+      "fromNode": "source-04-domain",
+      "fromSide": "right",
+      "toNode": "source-04-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e33",
+      "fromNode": "source-04-slice",
+      "fromSide": "right",
+      "toNode": "source-04-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e34",
+      "fromNode": "source-04-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e35",
+      "fromNode": "source-05",
+      "fromSide": "right",
+      "toNode": "source-05-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e36",
+      "fromNode": "source-05-current",
+      "fromSide": "right",
+      "toNode": "source-05-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e37",
+      "fromNode": "source-05-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e38",
+      "fromNode": "source-05-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e39",
+      "fromNode": "source-05-domain",
+      "fromSide": "right",
+      "toNode": "source-05-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e40",
+      "fromNode": "source-05-slice",
+      "fromSide": "right",
+      "toNode": "source-05-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e41",
+      "fromNode": "source-05-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e42",
+      "fromNode": "source-06",
+      "fromSide": "right",
+      "toNode": "source-06-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e43",
+      "fromNode": "source-06-current",
+      "fromSide": "right",
+      "toNode": "source-06-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e44",
+      "fromNode": "source-06-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e45",
+      "fromNode": "source-06-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e46",
+      "fromNode": "source-06-domain",
+      "fromSide": "right",
+      "toNode": "source-06-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e47",
+      "fromNode": "source-06-slice",
+      "fromSide": "right",
+      "toNode": "source-06-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e48",
+      "fromNode": "source-06-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e49",
+      "fromNode": "source-07",
+      "fromSide": "right",
+      "toNode": "source-07-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e50",
+      "fromNode": "source-07-current",
+      "fromSide": "right",
+      "toNode": "source-07-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e51",
+      "fromNode": "source-07-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e52",
+      "fromNode": "source-07-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e53",
+      "fromNode": "source-07-domain",
+      "fromSide": "right",
+      "toNode": "source-07-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e54",
+      "fromNode": "source-07-slice",
+      "fromSide": "right",
+      "toNode": "source-07-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e55",
+      "fromNode": "source-07-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e56",
+      "fromNode": "source-08",
+      "fromSide": "right",
+      "toNode": "source-08-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e57",
+      "fromNode": "source-08-current",
+      "fromSide": "right",
+      "toNode": "source-08-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e58",
+      "fromNode": "source-08-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e59",
+      "fromNode": "source-08-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e60",
+      "fromNode": "source-08-domain",
+      "fromSide": "right",
+      "toNode": "source-08-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e61",
+      "fromNode": "source-08-slice",
+      "fromSide": "right",
+      "toNode": "source-08-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e62",
+      "fromNode": "source-08-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e63",
+      "fromNode": "source-09",
+      "fromSide": "right",
+      "toNode": "source-09-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e64",
+      "fromNode": "source-09-current",
+      "fromSide": "right",
+      "toNode": "source-09-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e65",
+      "fromNode": "source-09-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e66",
+      "fromNode": "source-09-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e67",
+      "fromNode": "source-09-domain",
+      "fromSide": "right",
+      "toNode": "source-09-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e68",
+      "fromNode": "source-09-slice",
+      "fromSide": "right",
+      "toNode": "source-09-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e69",
+      "fromNode": "source-09-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e70",
+      "fromNode": "source-10",
+      "fromSide": "right",
+      "toNode": "source-10-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e71",
+      "fromNode": "source-10-current",
+      "fromSide": "right",
+      "toNode": "source-10-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e72",
+      "fromNode": "source-10-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e73",
+      "fromNode": "source-10-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e74",
+      "fromNode": "source-10-domain",
+      "fromSide": "right",
+      "toNode": "source-10-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e75",
+      "fromNode": "source-10-slice",
+      "fromSide": "right",
+      "toNode": "source-10-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e76",
+      "fromNode": "source-10-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e77",
+      "fromNode": "source-11",
+      "fromSide": "right",
+      "toNode": "source-11-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e78",
+      "fromNode": "source-11-current",
+      "fromSide": "right",
+      "toNode": "source-11-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e79",
+      "fromNode": "source-11-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e80",
+      "fromNode": "source-11-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e81",
+      "fromNode": "source-11-domain",
+      "fromSide": "right",
+      "toNode": "source-11-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e82",
+      "fromNode": "source-11-slice",
+      "fromSide": "right",
+      "toNode": "source-11-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e83",
+      "fromNode": "source-11-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e84",
+      "fromNode": "source-12",
+      "fromSide": "right",
+      "toNode": "source-12-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e85",
+      "fromNode": "source-12-current",
+      "fromSide": "right",
+      "toNode": "source-12-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e86",
+      "fromNode": "source-12-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e87",
+      "fromNode": "source-12-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e88",
+      "fromNode": "source-12-domain",
+      "fromSide": "right",
+      "toNode": "source-12-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e89",
+      "fromNode": "source-12-slice",
+      "fromSide": "right",
+      "toNode": "source-12-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e90",
+      "fromNode": "source-12-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e91",
+      "fromNode": "source-13",
+      "fromSide": "right",
+      "toNode": "source-13-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e92",
+      "fromNode": "source-13-current",
+      "fromSide": "right",
+      "toNode": "source-13-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e93",
+      "fromNode": "source-13-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e94",
+      "fromNode": "source-13-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e95",
+      "fromNode": "source-13-domain",
+      "fromSide": "right",
+      "toNode": "source-13-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e96",
+      "fromNode": "source-13-slice",
+      "fromSide": "right",
+      "toNode": "source-13-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e97",
+      "fromNode": "source-13-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e98",
+      "fromNode": "source-14",
+      "fromSide": "right",
+      "toNode": "source-14-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e99",
+      "fromNode": "source-14-current",
+      "fromSide": "right",
+      "toNode": "source-14-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e100",
+      "fromNode": "source-14-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e101",
+      "fromNode": "source-14-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e102",
+      "fromNode": "source-14-domain",
+      "fromSide": "right",
+      "toNode": "source-14-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e103",
+      "fromNode": "source-14-slice",
+      "fromSide": "right",
+      "toNode": "source-14-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e104",
+      "fromNode": "source-14-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e105",
+      "fromNode": "source-15",
+      "fromSide": "right",
+      "toNode": "source-15-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e106",
+      "fromNode": "source-15-current",
+      "fromSide": "right",
+      "toNode": "source-15-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e107",
+      "fromNode": "source-15-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e108",
+      "fromNode": "source-15-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e109",
+      "fromNode": "source-15-domain",
+      "fromSide": "right",
+      "toNode": "source-15-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e110",
+      "fromNode": "source-15-slice",
+      "fromSide": "right",
+      "toNode": "source-15-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e111",
+      "fromNode": "source-15-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e112",
+      "fromNode": "source-16",
+      "fromSide": "right",
+      "toNode": "source-16-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e113",
+      "fromNode": "source-16-current",
+      "fromSide": "right",
+      "toNode": "source-16-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e114",
+      "fromNode": "source-16-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e115",
+      "fromNode": "source-16-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e116",
+      "fromNode": "source-16-domain",
+      "fromSide": "right",
+      "toNode": "source-16-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e117",
+      "fromNode": "source-16-slice",
+      "fromSide": "right",
+      "toNode": "source-16-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e118",
+      "fromNode": "source-16-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e119",
+      "fromNode": "source-17",
+      "fromSide": "right",
+      "toNode": "source-17-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e120",
+      "fromNode": "source-17-current",
+      "fromSide": "right",
+      "toNode": "source-17-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e121",
+      "fromNode": "source-17-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e122",
+      "fromNode": "source-17-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e123",
+      "fromNode": "source-17-domain",
+      "fromSide": "right",
+      "toNode": "source-17-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e124",
+      "fromNode": "source-17-slice",
+      "fromSide": "right",
+      "toNode": "source-17-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e125",
+      "fromNode": "source-17-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e126",
+      "fromNode": "source-18",
+      "fromSide": "right",
+      "toNode": "source-18-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e127",
+      "fromNode": "source-18-current",
+      "fromSide": "right",
+      "toNode": "source-18-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e128",
+      "fromNode": "source-18-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e129",
+      "fromNode": "source-18-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e130",
+      "fromNode": "source-18-domain",
+      "fromSide": "right",
+      "toNode": "source-18-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e131",
+      "fromNode": "source-18-slice",
+      "fromSide": "right",
+      "toNode": "source-18-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e132",
+      "fromNode": "source-18-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e133",
+      "fromNode": "source-19",
+      "fromSide": "right",
+      "toNode": "source-19-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e134",
+      "fromNode": "source-19-current",
+      "fromSide": "right",
+      "toNode": "source-19-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e135",
+      "fromNode": "source-19-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e136",
+      "fromNode": "source-19-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e137",
+      "fromNode": "source-19-domain",
+      "fromSide": "right",
+      "toNode": "source-19-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e138",
+      "fromNode": "source-19-slice",
+      "fromSide": "right",
+      "toNode": "source-19-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e139",
+      "fromNode": "source-19-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e140",
+      "fromNode": "source-20",
+      "fromSide": "right",
+      "toNode": "source-20-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e141",
+      "fromNode": "source-20-current",
+      "fromSide": "right",
+      "toNode": "source-20-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e142",
+      "fromNode": "source-20-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e143",
+      "fromNode": "source-20-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e144",
+      "fromNode": "source-20-domain",
+      "fromSide": "right",
+      "toNode": "source-20-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e145",
+      "fromNode": "source-20-slice",
+      "fromSide": "right",
+      "toNode": "source-20-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e146",
+      "fromNode": "source-20-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e147",
+      "fromNode": "source-21",
+      "fromSide": "right",
+      "toNode": "source-21-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e148",
+      "fromNode": "source-21-current",
+      "fromSide": "right",
+      "toNode": "source-21-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e149",
+      "fromNode": "source-21-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e150",
+      "fromNode": "source-21-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e151",
+      "fromNode": "source-21-domain",
+      "fromSide": "right",
+      "toNode": "source-21-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e152",
+      "fromNode": "source-21-slice",
+      "fromSide": "right",
+      "toNode": "source-21-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e153",
+      "fromNode": "source-21-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e154",
+      "fromNode": "source-22",
+      "fromSide": "right",
+      "toNode": "source-22-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e155",
+      "fromNode": "source-22-current",
+      "fromSide": "right",
+      "toNode": "source-22-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e156",
+      "fromNode": "source-22-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e157",
+      "fromNode": "source-22-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e158",
+      "fromNode": "source-22-domain",
+      "fromSide": "right",
+      "toNode": "source-22-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e159",
+      "fromNode": "source-22-slice",
+      "fromSide": "right",
+      "toNode": "source-22-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e160",
+      "fromNode": "source-22-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e161",
+      "fromNode": "source-23",
+      "fromSide": "right",
+      "toNode": "source-23-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e162",
+      "fromNode": "source-23-current",
+      "fromSide": "right",
+      "toNode": "source-23-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e163",
+      "fromNode": "source-23-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e164",
+      "fromNode": "source-23-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e165",
+      "fromNode": "source-23-domain",
+      "fromSide": "right",
+      "toNode": "source-23-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e166",
+      "fromNode": "source-23-slice",
+      "fromSide": "right",
+      "toNode": "source-23-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e167",
+      "fromNode": "source-23-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e168",
+      "fromNode": "source-24",
+      "fromSide": "right",
+      "toNode": "source-24-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e169",
+      "fromNode": "source-24-current",
+      "fromSide": "right",
+      "toNode": "source-24-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e170",
+      "fromNode": "source-24-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e171",
+      "fromNode": "source-24-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e172",
+      "fromNode": "source-24-domain",
+      "fromSide": "right",
+      "toNode": "source-24-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e173",
+      "fromNode": "source-24-slice",
+      "fromSide": "right",
+      "toNode": "source-24-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e174",
+      "fromNode": "source-24-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e175",
+      "fromNode": "source-25",
+      "fromSide": "right",
+      "toNode": "source-25-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e176",
+      "fromNode": "source-25-current",
+      "fromSide": "right",
+      "toNode": "source-25-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e177",
+      "fromNode": "source-25-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e178",
+      "fromNode": "source-25-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e179",
+      "fromNode": "source-25-domain",
+      "fromSide": "right",
+      "toNode": "source-25-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e180",
+      "fromNode": "source-25-slice",
+      "fromSide": "right",
+      "toNode": "source-25-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e181",
+      "fromNode": "source-25-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e182",
+      "fromNode": "source-26",
+      "fromSide": "right",
+      "toNode": "source-26-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e183",
+      "fromNode": "source-26-current",
+      "fromSide": "right",
+      "toNode": "source-26-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e184",
+      "fromNode": "source-26-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e185",
+      "fromNode": "source-26-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e186",
+      "fromNode": "source-26-domain",
+      "fromSide": "right",
+      "toNode": "source-26-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e187",
+      "fromNode": "source-26-slice",
+      "fromSide": "right",
+      "toNode": "source-26-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e188",
+      "fromNode": "source-26-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e189",
+      "fromNode": "source-27",
+      "fromSide": "right",
+      "toNode": "source-27-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e190",
+      "fromNode": "source-27-current",
+      "fromSide": "right",
+      "toNode": "source-27-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e191",
+      "fromNode": "source-27-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e192",
+      "fromNode": "source-27-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e193",
+      "fromNode": "source-27-domain",
+      "fromSide": "right",
+      "toNode": "source-27-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e194",
+      "fromNode": "source-27-slice",
+      "fromSide": "right",
+      "toNode": "source-27-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e195",
+      "fromNode": "source-27-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e196",
+      "fromNode": "source-28",
+      "fromSide": "right",
+      "toNode": "source-28-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e197",
+      "fromNode": "source-28-current",
+      "fromSide": "right",
+      "toNode": "source-28-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e198",
+      "fromNode": "source-28-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e199",
+      "fromNode": "source-28-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e200",
+      "fromNode": "source-28-domain",
+      "fromSide": "right",
+      "toNode": "source-28-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e201",
+      "fromNode": "source-28-slice",
+      "fromSide": "right",
+      "toNode": "source-28-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e202",
+      "fromNode": "source-28-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e203",
+      "fromNode": "source-29",
+      "fromSide": "right",
+      "toNode": "source-29-current",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e204",
+      "fromNode": "source-29-current",
+      "fromSide": "right",
+      "toNode": "source-29-domain",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e205",
+      "fromNode": "source-29-current",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e206",
+      "fromNode": "source-29-domain",
+      "fromSide": "right",
+      "toNode": "excluded",
+      "toSide": "left",
+      "label": "false"
+    },
+    {
+      "id": "e207",
+      "fromNode": "source-29-domain",
+      "fromSide": "right",
+      "toNode": "source-29-slice",
+      "toSide": "left",
+      "label": "true"
+    },
+    {
+      "id": "e208",
+      "fromNode": "source-29-slice",
+      "fromSide": "right",
+      "toNode": "source-29-nonempty",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e209",
+      "fromNode": "source-29-nonempty",
+      "fromSide": "right",
+      "toNode": "selected",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e210",
+      "fromNode": "selected",
+      "fromSide": "right",
+      "toNode": "dispatch",
+      "toSide": "left",
+      "label": ""
+    },
+    {
+      "id": "e211",
+      "fromNode": "dispatch",
+      "fromSide": "right",
+      "toNode": "output",
+      "toSide": "left",
+      "label": ""
+    }
+  ]
+}

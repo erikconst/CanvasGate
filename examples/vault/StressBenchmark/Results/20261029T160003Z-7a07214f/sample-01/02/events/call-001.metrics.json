@@ -1,0 +1,12 @@
+{
+  "usage": {
+    "input_tokens": 13767,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 380,
+    "reasoning_output_tokens": 88
+  },
+  "elapsed_seconds": 9.571,
+  "prompt_chars": 6880,
+  "tool_calls": 0
+}

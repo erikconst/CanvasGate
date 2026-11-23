@@ -1,0 +1,1565 @@
+{
+  "passed": true,
+  "checks": [
+    "8-node graph rendered",
+    "validation",
+    "pointer drag and optimistic save",
+    "mock simulation",
+    "actual input inspector",
+    "replay decision equality",
+    "zero replay external calls",
+    "history",
+    "incomplete context blocked before AI",
+    "mobile horizontal containment",
+    "no JavaScript errors"
+  ],
+  "mock_report": {
+    "engine": "canvasgate",
+    "run_id": "op-206f172b4df9601fabd452f45d62",
+    "canvas": "<TEMP_VAULT>\\Studio\\Order review.canvas",
+    "outcome": "completed",
+    "transaction_state": "PREVIEW",
+    "abort_reason": "",
+    "calls": 1,
+    "usage": {
+      "input_tokens": 0,
+      "cached_input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "uncached_input_tokens": 0
+    },
+    "simulation": true,
+    "external_calls": 0,
+    "cached_calls": 0,
+    "model_calls": [
+      {
+        "model": null,
+        "backend": "MockBackend",
+        "usage": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "uncached_input_tokens": 0
+        },
+        "idempotency_key": "3c7888aa4c112f73c6f15179942cceaadf1e94e683f06075afc3d7e12e218476",
+        "cached": false,
+        "replayed": false
+      }
+    ],
+    "nodes": {
+      "spec": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cents, never floating point.\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\nReturn valid, errors and total_cents. Invalid totals are null.\n\n## Background\nMarketing ideas and visual branding do not affect this policy.\n",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.733,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "FILE",
+          "why": "Loaded the immutable source bytes recorded in this run's snapshot.",
+          "active_edges": [],
+          "inactive_edges": [],
+          "input_sha256": "c338f723352dbb84ba92fb75084bbc10a33d9c49b88672107b10b8c8f0622bbb",
+          "input_sources": {},
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+        }
+      },
+      "approved": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cents, never floating point.\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\nReturn valid, errors and total_cents. Invalid totals are null.\n\n## Background\nMarketing ideas and visual branding do not affect this policy.\n",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.18,
+        "tokens_used": 0,
+        "input_preview": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "YAML_EQ",
+          "why": "YAML_EQ evaluated to True; outgoing edge labels control the next branches.",
+          "active_edges": [
+            "e0"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "281bfbbfadd6059225acbb21f6fffbbf195fa82d0acf95936dc3a820322448c2",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+        }
+      },
+      "policy": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cents, never floating point.\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\nReturn valid, errors and total_cents. Invalid totals are null.",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.683,
+        "tokens_used": 0,
+        "input_preview": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "SLICE",
+          "why": "Extracted SECTION:Policy; only the selected fragment is forwarded.",
+          "active_edges": [
+            "e1"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "90f343d0c02ecda376f162a6358c64d739188f83226e00cd70e16c290e4f38dd",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+        }
+      },
+      "review": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Inactive incoming branch.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "No active incoming branch, or JOIN ALL has an inactive dependency.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "plan": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 1,
+        "duration_ms": 17.884,
+        "tokens_used": 0,
+        "input_preview": "## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cent",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "AGENT",
+          "why": "Agent output passed envelope, content and output-contract checks.",
+          "active_edges": [
+            "e2"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "2829ad953c20630ff3d56cff5d8d925fd57416c1d07f2bdaea5a98b62a8a6265",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [
+            {
+              "attempt": 1,
+              "accepted": true,
+              "effect": "3c7888aa4c112f73c6f15179942cceaadf1e94e683f06075afc3d7e12e218476"
+            }
+          ],
+          "input_contract": {
+            "passed": true,
+            "specified": true,
+            "checks": [
+              "source:Studio/Specification.md",
+              "authorized_sources",
+              "essential_text",
+              "essential_text",
+              "essential_text",
+              "essential_text"
+            ]
+          },
+          "output_contract": {
+            "passed": true,
+            "specified": true,
+            "checks": [
+              "field:tasks",
+              "field:tests",
+              "field:risks",
+              "json_schema"
+            ]
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      },
+      "join": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.162,
+        "tokens_used": 0,
+        "input_preview": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate to",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "JOIN",
+          "why": "All active dependencies resolved.",
+          "active_edges": [
+            "e4"
+          ],
+          "inactive_edges": [
+            {
+              "id": "e5",
+              "source": "review",
+              "label": "",
+              "source_state": "SKIPPED",
+              "source_signal": false
+            }
+          ],
+          "input_sha256": "d09d839a7ed8ed59970f62125553d93b006296a31a3f36a51b202baf96c6084f",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      },
+      "write": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.769,
+        "tokens_used": 0,
+        "input_preview": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate to",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "WRITE",
+          "why": "Write staged in memory; target files are unchanged until commit.",
+          "active_edges": [
+            "e6"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "2180a4b47f220870062a333fa6a7023083c6d92df02bfce0614ae8cfe1cf04a9",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "specified": true,
+            "checks": [
+              "authorized_sources",
+              "field:tasks",
+              "field:tests",
+              "field:risks"
+            ]
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      },
+      "out": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.168,
+        "tokens_used": 0,
+        "input_preview": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate to",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "OUTPUT",
+          "why": "All active dependencies resolved.",
+          "active_edges": [
+            "e7"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "290f9375227148dd7a757e7f8a22b957a3e97fa282bf9fb3eb6ab391f96ac1d5",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      }
+    },
+    "outputs": {
+      "out": {
+        "name": "Accepted implementation plan",
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}"
+      }
+    },
+    "staged_mutations": [
+      {
+        "node_id": "write",
+        "path": "Studio/Output/Plan.md",
+        "mode": "OVERWRITE",
+        "bytes": 488
+      }
+    ],
+    "written_files": [],
+    "source_fingerprints": [
+      {
+        "path": "Studio/Specification.md",
+        "resolved": "<TEMP_VAULT>\\Studio\\Specification.md",
+        "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+      }
+    ],
+    "audit_log": "<TEMP_VAULT>\\.canvasgate\\logs\\op-206f172b4df9601fabd452f45d62.md",
+    "timestamp": "2026-10-30T09:16:40.723797+00:00",
+    "snapshot": {
+      "sha256": "981ff5bde9646c0a73ac4a617acbf66b5f0c1323c07e03974c31699205267458",
+      "path": "<TEMP_VAULT>\\.canvasgate\\runs\\op-206f172b4df9601fabd452f45d62",
+      "graph_sha256": "41303e3e3627b0630d69c6ea223f874812f9d58004a08d0727a4e2cea03bbbcd",
+      "mode": "live",
+      "replay_of": null
+    }
+  },
+  "replay_report": {
+    "engine": "canvasgate",
+    "run_id": "op-c58b20e2ca4abbaa60289117b3a8",
+    "canvas": "<TEMP_VAULT>\\Studio\\Order review.canvas",
+    "outcome": "completed",
+    "transaction_state": "PREVIEW",
+    "abort_reason": "",
+    "calls": 1,
+    "usage": {
+      "input_tokens": 0,
+      "cached_input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "uncached_input_tokens": 0
+    },
+    "simulation": false,
+    "external_calls": 0,
+    "cached_calls": 1,
+    "model_calls": [
+      {
+        "model": null,
+        "backend": "ReplayBackend",
+        "usage": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "uncached_input_tokens": 0
+        },
+        "idempotency_key": "3c7888aa4c112f73c6f15179942cceaadf1e94e683f06075afc3d7e12e218476",
+        "cached": true,
+        "replayed": true,
+        "original_usage": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "uncached_input_tokens": 0
+        }
+      }
+    ],
+    "nodes": {
+      "spec": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cents, never floating point.\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\nReturn valid, errors and total_cents. Invalid totals are null.\n\n## Background\nMarketing ideas and visual branding do not affect this policy.\n",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.538,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "FILE",
+          "why": "Loaded the immutable source bytes recorded in this run's snapshot.",
+          "active_edges": [],
+          "inactive_edges": [],
+          "input_sha256": "c338f723352dbb84ba92fb75084bbc10a33d9c49b88672107b10b8c8f0622bbb",
+          "input_sources": {},
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+        }
+      },
+      "approved": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cents, never floating point.\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\nReturn valid, errors and total_cents. Invalid totals are null.\n\n## Background\nMarketing ideas and visual branding do not affect this policy.\n",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.174,
+        "tokens_used": 0,
+        "input_preview": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "YAML_EQ",
+          "why": "YAML_EQ evaluated to True; outgoing edge labels control the next branches.",
+          "active_edges": [
+            "e0"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "281bfbbfadd6059225acbb21f6fffbbf195fa82d0acf95936dc3a820322448c2",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+        }
+      },
+      "policy": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cents, never floating point.\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\nReturn valid, errors and total_cents. Invalid totals are null.",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.52,
+        "tokens_used": 0,
+        "input_preview": "---\nrevision: 3\nrole: policy\nstatus: approved\n---\n# Order validation\n\n## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "SLICE",
+          "why": "Extracted SECTION:Policy; only the selected fragment is forwarded.",
+          "active_edges": [
+            "e1"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "90f343d0c02ecda376f162a6358c64d739188f83226e00cd70e16c290e4f38dd",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+        }
+      },
+      "review": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Inactive incoming branch.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "No active incoming branch, or JOIN ALL has an inactive dependency.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "plan": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 1,
+        "duration_ms": 0.793,
+        "tokens_used": 0,
+        "input_preview": "## Policy\n\nPOLICY_ID: order-v3\n\nValidate a pure Python order function. Do not mutate input.\nReject booleans as integers. Reject duplicate SKUs.\nUse integer cent",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "AGENT",
+          "why": "Agent output passed envelope, content and output-contract checks.",
+          "active_edges": [
+            "e2"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "2829ad953c20630ff3d56cff5d8d925fd57416c1d07f2bdaea5a98b62a8a6265",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [
+            {
+              "attempt": 1,
+              "accepted": true,
+              "effect": "3c7888aa4c112f73c6f15179942cceaadf1e94e683f06075afc3d7e12e218476"
+            }
+          ],
+          "input_contract": {
+            "passed": true,
+            "specified": true,
+            "checks": [
+              "source:Studio/Specification.md",
+              "authorized_sources",
+              "essential_text",
+              "essential_text",
+              "essential_text",
+              "essential_text"
+            ]
+          },
+          "output_contract": {
+            "passed": true,
+            "specified": true,
+            "checks": [
+              "field:tasks",
+              "field:tests",
+              "field:risks",
+              "json_schema"
+            ]
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      },
+      "join": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.159,
+        "tokens_used": 0,
+        "input_preview": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate to",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "JOIN",
+          "why": "All active dependencies resolved.",
+          "active_edges": [
+            "e4"
+          ],
+          "inactive_edges": [
+            {
+              "id": "e5",
+              "source": "review",
+              "label": "",
+              "source_state": "SKIPPED",
+              "source_signal": false
+            }
+          ],
+          "input_sha256": "d09d839a7ed8ed59970f62125553d93b006296a31a3f36a51b202baf96c6084f",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      },
+      "write": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.768,
+        "tokens_used": 0,
+        "input_preview": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate to",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "WRITE",
+          "why": "Write staged in memory; target files are unchanged until commit.",
+          "active_edges": [
+            "e6"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "2180a4b47f220870062a333fa6a7023083c6d92df02bfce0614ae8cfe1cf04a9",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "specified": true,
+            "checks": [
+              "authorized_sources",
+              "field:tasks",
+              "field:tests",
+              "field:risks"
+            ]
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      },
+      "out": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 0.95,
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.153,
+        "tokens_used": 0,
+        "input_preview": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate to",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+              },
+              {
+                "node_id": "policy",
+                "kind": "SECTION",
+                "argument": "Policy",
+                "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "OUTPUT",
+          "why": "All active dependencies resolved.",
+          "active_edges": [
+            "e7"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "290f9375227148dd7a757e7f8a22b957a3e97fa282bf9fb3eb6ab391f96ac1d5",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+                },
+                {
+                  "node_id": "policy",
+                  "kind": "SECTION",
+                  "argument": "Policy",
+                  "fragment_sha256": "79013aef378798c27f38e2efa295bb57ee912a18f5aae906614baa160343470e"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "7852ba35ee26b4ae2f3af379352cf4d7a1bdcec3cd2f6d33932397a14f25ddb6"
+        }
+      }
+    },
+    "outputs": {
+      "out": {
+        "name": "Accepted implementation plan",
+        "text": "{\n  \"tasks\": [\n    \"Validate container and field types without mutating input.\",\n    \"Reject booleans for integer fields and duplicate SKUs.\",\n    \"Calculate totals in integer cents only for valid orders.\"\n  ],\n  \"tests\": [\n    \"Cover missing fields and wrong types.\",\n    \"Check zero, minimum, maximum and oversized values.\",\n    \"Verify duplicate SKUs, indexed errors and unchanged input.\"\n  ],\n  \"risks\": [\n    \"Syntax and structure checks do not establish business correctness.\"\n  ]\n}"
+      }
+    },
+    "staged_mutations": [
+      {
+        "node_id": "write",
+        "path": "Studio/Output/Plan.md",
+        "mode": "OVERWRITE",
+        "bytes": 488
+      }
+    ],
+    "written_files": [],
+    "source_fingerprints": [
+      {
+        "path": "Studio/Specification.md",
+        "resolved": "<TEMP_VAULT>\\Studio\\Specification.md",
+        "sha256": "b95b3dc6eaf166cfceaf4dfdce269b7496e9607369de75dbf8106daa4ffd05fc"
+      }
+    ],
+    "audit_log": "<TEMP_VAULT>\\.canvasgate\\logs\\op-c58b20e2ca4abbaa60289117b3a8.md",
+    "timestamp": "2026-10-30T09:16:42.080821+00:00",
+    "snapshot": {
+      "sha256": "981ff5bde9646c0a73ac4a617acbf66b5f0c1323c07e03974c31699205267458",
+      "path": "<TEMP_VAULT>\\.canvasgate\\runs\\op-c58b20e2ca4abbaa60289117b3a8",
+      "graph_sha256": "41303e3e3627b0630d69c6ea223f874812f9d58004a08d0727a4e2cea03bbbcd",
+      "mode": "replay",
+      "replay_of": "op-206f172b4df9601fabd452f45d62"
+    },
+    "replay_comparison": {
+      "matches": true,
+      "different_nodes": [],
+      "scope": "node decisions and payloads; writes are not replayed"
+    }
+  },
+  "failure_report": {
+    "engine": "canvasgate",
+    "run_id": "op-a2c1a732e37c038991cf279ba4b8",
+    "canvas": "<TEMP_VAULT>\\Studio\\Order review.canvas",
+    "outcome": "error",
+    "transaction_state": "ABORTED",
+    "abort_reason": "policy: SECTION requires one unique heading 'Policy'; found 0.",
+    "calls": 0,
+    "usage": {
+      "input_tokens": 0,
+      "cached_input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "uncached_input_tokens": 0
+    },
+    "simulation": true,
+    "external_calls": 0,
+    "cached_calls": 0,
+    "model_calls": [],
+    "nodes": {
+      "spec": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "---\r\nrevision: 3\r\nrole: policy\r\nstatus: approved\r\n---\r\n# Order validation\r\n\r\n## Renamed policy\r\n\r\nPOLICY_ID: order-v3\r\n\r\nValidate a pure Python order function. Do not mutate input.\r\nReject booleans as integers. Reject duplicate SKUs.\r\nUse integer cents, never floating point.\r\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\r\nReturn valid, errors and total_cents. Invalid totals are null.\r\n\r\n## Background\r\nMarketing ideas and visual branding do not affect this policy.\r\n",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.593,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "FILE",
+          "why": "Loaded the immutable source bytes recorded in this run's snapshot.",
+          "active_edges": [],
+          "inactive_edges": [],
+          "input_sha256": "c338f723352dbb84ba92fb75084bbc10a33d9c49b88672107b10b8c8f0622bbb",
+          "input_sources": {},
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+        }
+      },
+      "approved": {
+        "state": "EXECUTED",
+        "status": true,
+        "signal": true,
+        "confidence": 1,
+        "text": "---\r\nrevision: 3\r\nrole: policy\r\nstatus: approved\r\n---\r\n# Order validation\r\n\r\n## Renamed policy\r\n\r\nPOLICY_ID: order-v3\r\n\r\nValidate a pure Python order function. Do not mutate input.\r\nReject booleans as integers. Reject duplicate SKUs.\r\nUse integer cents, never floating point.\r\nEvery order has customer_id and 1-100 items. Each item has sku, quantity 1-50, and unit_price_cents 0-1000000.\r\nReturn valid, errors and total_cents. Invalid totals are null.\r\n\r\n## Background\r\nMarketing ideas and visual branding do not affect this policy.\r\n",
+        "reason": "",
+        "attempts": 0,
+        "duration_ms": 0.174,
+        "tokens_used": 0,
+        "input_preview": "---\r\nrevision: 3\r\nrole: policy\r\nstatus: approved\r\n---\r\n# Order validation\r\n\r\n## Renamed policy\r\n\r\nPOLICY_ID: order-v3\r\n\r\nValidate a pure Python order function. ",
+        "lineage": {
+          "Studio/Specification.md": {
+            "sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775",
+            "metadata": {
+              "revision": 3,
+              "role": "policy",
+              "status": "approved"
+            },
+            "selections": [
+              {
+                "node_id": "spec",
+                "kind": "FILE",
+                "fragment_sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "YAML_EQ",
+          "why": "YAML_EQ evaluated to True; outgoing edge labels control the next branches.",
+          "active_edges": [
+            "e0"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "d45244a3ab6cc3f12399a127cd8c31ca629a192e28143c2cc239d467313d25d2",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+        }
+      },
+      "policy": {
+        "state": "FAILED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "SECTION requires one unique heading 'Policy'; found 0.",
+        "attempts": 0,
+        "duration_ms": 0.624,
+        "tokens_used": 0,
+        "input_preview": "---\r\nrevision: 3\r\nrole: policy\r\nstatus: approved\r\n---\r\n# Order validation\r\n\r\n## Renamed policy\r\n\r\nPOLICY_ID: order-v3\r\n\r\nValidate a pure Python order function. ",
+        "lineage": {},
+        "decision": {
+          "kind": "SLICE",
+          "why": "SECTION requires one unique heading 'Policy'; found 0.",
+          "active_edges": [
+            "e1"
+          ],
+          "inactive_edges": [],
+          "input_sha256": "d29a02aa8da24990d1a96f8f16c2456f9469162961b2ef7007ce379dafac82b9",
+          "input_sources": {
+            "Studio/Specification.md": {
+              "sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775",
+              "metadata": {
+                "revision": 3,
+                "role": "policy",
+                "status": "approved"
+              },
+              "selections": [
+                {
+                  "node_id": "spec",
+                  "kind": "FILE",
+                  "fragment_sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+                }
+              ]
+            }
+          },
+          "retry_history": [],
+          "input_contract": {
+            "passed": true,
+            "checks": [],
+            "specified": false
+          },
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "review": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Run aborted before this node.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "An earlier node failed; this node was not executed.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "plan": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Run aborted before this node.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "An earlier node failed; this node was not executed.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "join": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Run aborted before this node.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "An earlier node failed; this node was not executed.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "write": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Run aborted before this node.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "An earlier node failed; this node was not executed.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      },
+      "out": {
+        "state": "SKIPPED",
+        "status": false,
+        "signal": false,
+        "confidence": 1,
+        "text": "",
+        "reason": "Run aborted before this node.",
+        "attempts": 0,
+        "duration_ms": 0,
+        "tokens_used": 0,
+        "input_preview": "",
+        "lineage": {},
+        "decision": {
+          "why": "An earlier node failed; this node was not executed.",
+          "active_edges": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      }
+    },
+    "outputs": {},
+    "staged_mutations": [],
+    "written_files": [],
+    "source_fingerprints": [
+      {
+        "path": "Studio/Specification.md",
+        "resolved": "<TEMP_VAULT>\\Studio\\Specification.md",
+        "sha256": "9a059172990efc209775adc2c7c0e9276e5cab5056dbf71d2190a2ec8bc46775"
+      }
+    ],
+    "audit_log": "<TEMP_VAULT>\\.canvasgate\\logs\\op-a2c1a732e37c038991cf279ba4b8.md",
+    "timestamp": "2026-10-30T09:16:42.644598+00:00",
+    "snapshot": {
+      "sha256": "eabffae45cef118e4d87c840e446e2930aaa1eb678e35c38558d9617389550f3",
+      "path": "<TEMP_VAULT>\\.canvasgate\\runs\\op-a2c1a732e37c038991cf279ba4b8",
+      "graph_sha256": "41303e3e3627b0630d69c6ea223f874812f9d58004a08d0727a4e2cea03bbbcd",
+      "mode": "live",
+      "replay_of": null
+    }
+  }
+}
